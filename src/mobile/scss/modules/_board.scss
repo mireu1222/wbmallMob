@@ -1,0 +1,261 @@
+@charset "UTF-8";
+
+/* board */
+.boardview-wrap {
+    .board-head {
+        padding-bottom:45px;
+        border-bottom:1px solid $border;
+        text-align:center;
+        @include tablet {
+            padding-bottom:35px;
+        }
+        @include mobile {
+            padding-bottom:30px;
+        }
+        .date {
+            margin-bottom:5px;
+            color:$gray;
+            @include font18;
+        }
+        .tit {
+            color:$basic;
+            @include font32;
+            font-weight:800;
+        }
+        .name {
+            margin-top:5px;
+            color:$gray;
+            @include font14;
+            
+            em {
+                @include font16;
+                font-weight:700;
+            }
+        }
+    }
+    .board-content {
+        padding-top:60px;
+        border-bottom:1px solid $border;
+        @include tablet {
+            padding-top:50px;
+        }
+        @include mobile {
+            padding-top:30px;
+        }
+        .img {
+            margin:60px 0;
+            @include tablet {
+                margin:50px 0;
+            }
+            @include mobile {
+                margin:30px 0;
+            }
+            &:first-child {
+                margin-top:0;
+            }
+        }
+        .cont {
+            color:$basic;
+            @include font18;
+            &:last-child {
+                padding-bottom:60px;
+                @include tablet {
+                    padding-bottom:50px;
+                }
+                @include mobile {
+                    padding-bottom:30px;
+                }
+            }
+        }
+        .files {
+            margin-top:60px;
+            padding:15px 0;
+            border-top:1px solid $border;
+            @include clearfix;
+            @include tablet {
+                margin-top:50px;
+            }
+            @include mobile {
+                margin-top:30px;
+            }
+            .tit {
+                float:left;
+                color:$basic;
+                @include font18;
+                font-weight:700;
+            }
+            .file-lists {
+                margin-left:100px;
+                padding:2px 0;
+                font-size:0;
+                @include mobile {
+                    margin-left:80px;
+                    padding:0;
+                }
+                li {
+                    display:inline-block;
+                    vertical-align:middle;
+                    margin-right:20px;
+                    @include mobile {
+                        display:block;
+                        margin-top:5px;
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                    a {
+                        display:block;
+                        color:$gray;
+                        @include font16;
+                        
+                        @include pc {
+                            &:hover {
+                                text-decoration:underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .board-foot {
+        margin-top:60px;
+        position:relative;
+        text-align:center;
+        @include tablet {
+            margin-top:50px;
+        }
+        @include mobile {
+            margin-top:40px;
+        }
+        .more-view {
+            .prev,
+            .next {
+                position:absolute;
+                top:50%;
+                width:40%;
+                transform:translateY(-50%);
+                @include mobile {
+                    width:calc((100% - 40px) / 2);
+                }
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    width:24px;
+                    height:24px;
+                    margin-top:-12px;
+                    border:2px solid $gray;
+                    transform:rotate(45deg);
+                    @include mobile {
+                        width:12px;
+                        height:12px;
+                        margin-top:-6px;
+                    }
+                }
+                dl {
+                    display:flex;
+                    align-items:center;
+                    width:100%;
+                    dt {
+                        @include font20;
+                        color:$basic;
+                        font-weight:700;
+                        white-space:nowrap;
+                    }
+                    dd {
+                        padding:0 20px;
+                        overflow:hidden;
+                        @include mobile {
+                            padding:0 12px;
+                        }
+                        a {
+                            display:inline-block;
+                            vertical-align:middle;
+                            max-width:100%;
+                            @include font18;
+                            color:$basic;
+                            @include textEllipsis;
+                            &:hover {
+                                text-decoration:underline;
+                            }
+                        }
+                    }
+                }
+            }
+            .prev {
+                left:0;
+                padding-left:50px;
+                text-align:left;
+                @include mobile {
+                    padding-left:20px;
+                }
+                &::before {
+                    left:6px;
+                    border-top:none;
+                    border-right:none;
+                    @include mobile {
+                        left:3px;
+                    }
+                }
+            }
+            .next {
+                right:0;
+                padding-right:50px;
+                text-align:right;
+                @include mobile {
+                    padding-right:20px;
+                }
+                &::before {
+                    right:6px;
+                    border-left:none;
+                    border-bottom:none;
+                    @include mobile {
+                        right:3px;
+                    }
+                }
+                dl {
+                    flex-direction:row-reverse;
+                }
+            }
+        }
+        .btn-to-list {
+            position:relative;
+            display:inline-block;
+            vertical-align:top;
+            width:60px;
+            height:60px;
+            border:1px solid $yellow;
+            @include tablet {
+                width:50px;
+                height:50px;
+            }
+            @include mobile {
+                width:40px;
+                height:40px;
+            }
+            &::before {
+                content:' ';
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:16px;
+                height:11px;
+                margin-left:-8px;
+                margin-top:-5px;
+                border-top:1px solid $yellow;
+                border-bottom:1px solid $yellow;
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                top:50%;
+                left:50%;
+                width:16px;
+                height:1px;
+                margin-left:-8px;
+                background:$yellow;
+            }
+        }
+    }
+}

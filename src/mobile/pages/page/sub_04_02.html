@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container promotion">
+            <div class="sections">
+                @@include('./layout/page-title.html', {
+                    title : '보험기획관',
+                })
+                <!-- 화면이동 -->
+                <div class="select-dropdown ui-dropdown">
+                    <a href="#n" class="btn-toggle"><span class="blind">현재 페이지</span>보험별 기획<span class="blind">페이지 목록 보기</span></a>
+                    <ul class="lists">
+                        <li><a href="/mobile/page/sub_04_01.html">보장별 기획</a></li>
+                        <li class="active"><a href="/mobile/page/sub_04_02.html">보험별 기획</a></li>
+                        <li><a href="/mobile/page/sub_04_03.html">무해지보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_04.html">치아보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_05.html">유병자보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_06.html">운전자보험기획관</a></li>
+                    </ul>
+                </div>
+                <!-- // 화면이동 -->
+                @@include('./modules/promotion-list.html', {
+                    img : 'img-insu2-',
+                    lists : [
+                        {
+                            link : '/mobile/page/sub_04_02_view01.html',
+                            title : '의료실비보험',
+                            desc : '20세에서 100세까지<br>온 국민 필수보험'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view02.html',
+                            title : '암보험',
+                            desc : '점점 사라지는 암보험,<br>미리 준비하기!'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view03.html',
+                            title : '신생아보험',
+                            desc : '뱃속부터 평-생<br>우리 아기를 지켜 주세요.'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view04.html',
+                            title : '어린이보험',
+                            desc : '다치거나 사고나도 안심!<br>내 아이의 수호천사'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view05.html',
+                            title : '운전자/상해보험',
+                            desc : '자동차 보험의<br>사각지대를 보장'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view06.html',
+                            title : '연금/연금저축보험',
+                            desc : '노후 준비를 위한<br>재테크 첫 걸음!'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view07.html',
+                            title : '종신보험',
+                            desc : '우리집 가장이라면 필수!<br>나와 가족을 평생동안 보장'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view08.html',
+                            title : '치매간병보험',
+                            desc : '노후에 필요한<br>각종 의료비 지원'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view09.html',
+                            title : '저축보험',
+                            desc : '저축은 물론,<br>보장까지 한번에!'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view10.html',
+                            title : '수술/입원비보험',
+                            desc : '각종 질병에 대한<br>건강/종합보험!'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view11.html',
+                            title : '정기보험',
+                            desc : '우리 가족의<br>미래를 위한 준비!'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view12.html',
+                            title : '변액/변액연금보험',
+                            desc : '장기 투자상품의<br>새로운 발견!'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view13.html',
+                            title : '주택화재보험',
+                            desc : '우리집<br>안전 지킴이'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view14.html',
+                            title : '치아보험',
+                            desc : '가족의 건강은<br>치아에서부터 시작!'
+                        }, {
+                            link : '/mobile/page/sub_04_02_view15.html',
+                            title : '간병비주는 치매보험',
+                            desc : '간병비가 꼭 필요한 질병 치매!<br>한번에 준비하는 방법은?'
+                        }
+                    ]
+                })
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

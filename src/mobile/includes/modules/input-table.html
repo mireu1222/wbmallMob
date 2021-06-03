@@ -1,0 +1,317 @@
+<div class="tbl-wrap">
+    @@if (context.support) {
+    <div class="tbltit-wrap">
+        <p class="desc">궁금하신 내용에 해당하는 항목을 선택하신 후 문의하시면 기입하신 이메일 또는 연락처로 드리겠습니다.</p>
+        <p class="tbl-essen right"><em>*</em> 필수 입력사항</p>
+    </div>
+    }
+    @@if (context.reservation) {
+    <div class="tbltit-wrap">
+        <p class="desc">지역을 선택하시면 예약 가능한 여행지 선택이 가능합니다.</p>
+    </div>    
+    }
+    <table class="table row-tbl">
+        <caption>@@caption</caption>
+        <colgroup>
+            <col class="row-col1">
+            <col>
+        </colgroup>
+        <tbody>
+            @@if (context.support) {
+            <tr>
+                <th scope="row">항목</th>
+                <td>
+                    @@include('./modules/slt-list.html', {
+                        'size' : 'auto',
+                        'rdo' : 'slt',
+                        'slt' : [
+                            '이용 문의', '예약 문의', '채용 문의', '제휴 문의', '기타'
+                        ]
+                    })
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="inp-name" class="essen">이름<span class="blind">필수입력</span></label></th>
+                <td>
+                    <span class="input-wrap">
+                        <input type="text" id="inp-name">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="inp-phone" class="essen">휴대전화<span class="blind">필수입력</span></label></th>
+                <td>
+                    <span class="input-wrap">
+                        <input type="text" id="inp-phone" placeholder="'-' 없이 입력하십시오.">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="inp-email" class="essen">이메일<span class="blind">필수입력</span></label></th>
+                <td>
+                    <span class="input-wrap">
+                        <input type="text" id="inp-email" placeholder="ex)support@tabori.com">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="inp-title" class="essen">제목<span class="blind">필수입력</span></label></th>
+                <td>
+                    <span class="input-wrap block">
+                        <input type="text" id="inp-title">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="inp-cont" class="essen">내용<span class="blind">필수입력</span></label></th>
+                <td>
+                    <span class="input-wrap block">
+                        <textarea id="inp-cont"></textarea>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">파일첨부</th>
+                <td>
+                    <div class="fileinput-wrap">
+                        <span class="input-wrap file-name">
+                            <input type="text" value="파일선택" disabled>
+                        </span>
+                        <label for="file-upload">업로드</label>
+                        <input type="file" id="file-upload">
+                    </div>
+                </td>
+            </tr>
+            }
+            @@if (context.review) {
+            <tr>
+                <th scope="row"><label for="inp-title">제목</label></th>
+                <td>
+                    <span class="input-wrap block">
+                        <input type="text" id="inp-title">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="inp-cont">내용</label></th>
+                <td>
+                    <span class="input-wrap block">
+                        <textarea id="inp-cont"></textarea>
+                    </span>
+                </td>
+            </tr>
+            }
+            @@if (context.photos) {
+            <tr>
+                <th scope="row"><label for="inp-title">제목</label></th>
+                <td>
+                    <span class="input-wrap block">
+                        <input type="text" id="inp-title">
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">썸네일</th>
+                <td>
+                    <div class="fileinput-wrap">
+                        <span class="input-wrap file-name">
+                            <input type="text" value="파일선택" disabled>
+                        </span>
+                        <label for="file-upload">업로드</label>
+                        <input type="file" id="file-upload">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row"><label for="inp-cont">내용</label></th>
+                <td>
+                    <span class="input-wrap block">
+                        <textarea id="inp-cont"></textarea>
+                    </span>
+                </td>
+            </tr>
+            }
+            @@if (context.reservation) {
+            <tr>
+                <th scope="row">지역 선택</th>
+                <td>
+                    <div class="slt-lists narrow">
+                        <ul data-evt="radio-tab">
+                            <li>
+                                <span id="area01" class="rdo-wrap">
+                                    <input type="radio" id="area-slt01" name="area-slt" checked>
+                                    <label for="area-slt01">장성</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span id="area02" class="rdo-wrap">
+                                    <input type="radio" id="area-slt02" name="area-slt">
+                                    <label for="area-slt02">보성</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span id="area03" class="rdo-wrap">
+                                    <input type="radio" id="area-slt03" name="area-slt">
+                                    <label for="area-slt03">광주</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">여행지 선택</th>
+                <td>
+                    <div class="slt-lists narrow" data-id="area01">
+                        <ul>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="area01-1" name="area01" checked>
+                                    <label for="area01-1">황룡강</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="area01-2" name="area01">
+                                    <label for="area01-2">황룡강 생태공원</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slt-lists narrow" data-id="area02" style="display:none;">
+                        <ul>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="area02-1" name="area02" checked>
+                                    <label for="area02-1">중도방죽</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="area02-2" name="area02">
+                                    <label for="area02-2">벌교천</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slt-lists narrow" data-id="area03" style="display:none;">
+                        <ul>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="area03-1" name="area03" checked>
+                                    <label for="area03-1">펭귄마을</label>
+                                </span>
+                            </li>
+                            <li>
+                                <span class="rdo-wrap">
+                                    <input type="radio" id="area03-2" name="area03">
+                                    <label for="area03-2">푸른길 공원</label>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">예약 구분</th>
+                <td>
+                    @@include('./modules/slt-list.html', {
+                        'size' : 'wide',
+                        'rdo' : 'rsv-type',
+                        'slt' : [
+                            '휠체어+타보리+안내요원', '휠체어+타보리', '휠체어'
+                        ]
+                    })
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">예약일 선택</th>
+                <td>
+                    <div class="datepicker-wrap">
+                        <span class="input-wrap">
+                            <input type="text" class="datepicker-here" data-language="ko" readonly>
+                        </span>
+                        <button type="button" class="btn-cal"><span class="blind">날짜 선택</span></button>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">예약시간 선택</th>
+                <td>
+                    <div class="rsv-time-select">
+                        <div class="morning">
+                            <p class="time">오전</p>
+                            @@include('./modules/slt-list.html', {
+                                'size' : 'narrow',
+                                'chk' : 'time-morning',
+                                'slt' : [
+                                    '10:00~11:00<span>(신청가능<em>10</em>대)</span>', '11:00~12:00<span>(신청가능<em>10</em>대)</span>'
+                                ]
+                            })
+                        </div>
+                        <div class="noon">
+                            <p class="time">오후</p>
+                            @@include('./modules/slt-list.html', {
+                                'size' : 'narrow',
+                                'chk' : 'time-noon',
+                                'slt' : [
+                                    '13:00~14:00<span>(신청가능<em>10</em>대)</span>', '14:00~15:00<span>(신청가능<em>10</em>대)</span>', '15:00~16:00<span>(신청가능<em>10</em>대)</span>', '16:00~17:00<span>(신청가능<em>10</em>대)</span>'
+                                ]
+                            })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@@if(context.support) {
+<dl class="tit-cont-box scroll">
+    <dt class="tit">개인정보 수집동의</dt>
+    <dd class="cont">
+        ■ 수집하는 개인정보 항목<br>
+        회사는 업무문의, 지원문의 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+        - 수집항목 : 이름, 휴대전화번호, 이메일, 쿠키, 접속 IP 정보<br>
+        - 개인정보 수집방법 : 홈페이지(www.abc.kr), 서면양식<br>
+        ■ 개인정보의 수집 및 이용목적<br>
+        회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+        - 업무에 대한 문의, 지원문의 등 민원처리, 고지사항 전달 <br>
+        ■ 개인정보의 보유 및 이용기간<br>
+        원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br>
+        - 보존 항목 : 이름 , 휴대전화번호 , 이메일 , 접속 로그 , 쿠키 , 접속 IP 정보<br>
+        - 보존 기간 : 1년
+    </dd>
+</dl>
+<div class="agreement-check">
+    <span class="chk-wrap">
+        <input type="checkbox" id="chk-agree" name="chk-agree">
+        <label for="chk-agree">위 내용을 숙지하였으며 동의합니다.</label>
+    </span>
+</div>
+<div class="btn-wrap">
+    <button type="submit" class="btn black submit"><span>문의 등록</span></button>
+</div>
+}
+@@if (context.review) {
+<div class="btn-wrap">
+    <button type="submit" class="btn black submit"><span>완료</span></button>
+    <a href="/mobile/page/sub_05_02.html" class="btn gray submit"><span>취소</span></a>
+</div>
+}
+@@if (context.reservation) {
+<div class="btn-wrap">
+    <button type="submit" class="btn black submit"><span>타보리 예약하기</span></button>
+</div>
+<div class="tit-cont-box">
+    <h4 class="tit">선착순 예약정책</h4>
+    <div class="cont">
+        <p class="bold">선착순 방식으로 예약 신청할 경우</p>
+        <p>
+            온라인 예약 메뉴에서 이용일, 시간, 이용구분하여 선택해 예약 신청을 합니다.<br>
+            예약은 1일 기준 최대 2시간입니다.<br>
+            예약 당일은 취소가 불가하며, 2일 이내에 예약해 주세요!
+        </p>
+    </div>
+</div>
+}

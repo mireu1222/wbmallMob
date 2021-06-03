@@ -1,0 +1,568 @@
+@charset "UTF-8";
+
+/* insu products list */
+.card-lists-wrap {
+    overflow:hidden;
+    ul.lists {
+        li {
+            position:relative;
+            margin-top:15px;
+            &:first-child {
+                margin-top:0;
+            }
+            .inner {
+                position:relative;
+                padding:40px 12px;
+                border:1px solid $border;
+                text-align:center;
+                .flags {
+                    position:absolute;
+                    top:-1px;
+                    left:22px;
+                }
+                .ci {
+                    display:block;
+                    margin-bottom:30px;
+                    img {
+                        vertical-align:top;
+                    }
+                }
+                .tit {
+                    margin-bottom:15px;
+                    font-size:18px;
+                    line-height:24px;
+                    color:$basic;
+                    font-weight:500;
+                    word-break:keep-all;
+                }
+                .condition {
+                    margin-bottom:15px;
+                    span {
+                        display:inline-block;
+                        vertical-align:top;
+                        width:auto;
+                        max-width:100%;
+                        height:40px;
+                        padding:0 15px;
+                        border:2px solid $border;
+                        border-radius:20px;
+                        font-size:13px;
+                        line-height:36px;
+                        color:$point;
+                        font-weight:500;
+                        @include textEllipsis;
+                    }
+                }
+                .desc {
+                    @include font14;
+                    color:$basic;
+                    word-break:keep-all;
+                    @include textEllipsisClamp(3);
+                }
+                .ex {
+                    @include font13;
+                    color:$gray;
+                    word-break:keep-all;
+                }
+                .more {
+                    margin-top:10px;
+                    @include font13;
+                    color:$gray;
+                    @include textEllipsis;
+                }
+                .buttons {
+                    margin-top:25px;
+                }
+            }
+        }
+    }
+    &.list-type {
+        ul.lists li .inner .tit {
+            @include textEllipsis;
+        }
+    }
+    &.hover-type {
+        ul.lists li:hover .hover {
+            display:block;
+        }
+        .hover {
+            display:none;
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            background:rgba(#000, 0.9);
+            text-align:center;
+            &::before {
+                content:' ';
+                display:inline-block;
+                height:100%;
+                vertical-align:middle;
+                margin-right:-0.05em;
+            }
+            .cont {
+                display:inline-block;
+                width:98%;
+                vertical-align:middle;
+                .btn-preview {
+                    display:inline-block;
+                    vertical-align:top;
+                    color:#fff;
+                    font-size:27px;
+                    &::before {
+                        content:' ';
+                        display:block;
+                        width:38px;
+                        height:38px;
+                        margin:0 auto 10px;
+                        background:url('/mobile/images/icon/icon-search-wt.png') center no-repeat;
+                    }
+                }
+                .compare {
+                    margin-top:40px;
+                    font-size:0;
+                    .btn-compare {
+                        display:inline-block;
+                        vertical-align:middle;
+                        color:#fff;
+                        @include font16;
+                        &::before {
+                            content:' ';
+                            display:inline-block;
+                            width:22px;
+                            height:22px;
+                            margin-right:4px;
+                            vertical-align:top;
+                            background:url('/mobile/images/icon/icon-click.png') center no-repeat;
+                        }
+                    }
+                    .tooltip-wrap {
+                        position:relative;
+                        display:inline-block;
+                        vertical-align:middle;
+                        margin-left:6px;
+                        .tooltip-target {
+                            display:inline-block;
+                            width:18px;
+                            height:18px;
+                            background:$yellow;
+                            border-radius:50%;
+                            color:#fff;
+                            text-align:left;
+                            &::before {
+                                content:'?';
+                                display:inline-block;
+                                vertical-align:middle;
+                                font-size:13px;
+                                line-height:18px;
+                                text-indent:5px;
+                            }
+                            &::after {
+                                display:none;
+                                content:' ';
+                                position:absolute;
+                                bottom:100%;
+                                left:50%;
+                                margin-bottom:4px;
+                                height:0;
+                                margin-left:-5px;
+                                border-top:6px solid $yellow;
+                                border-left:5px solid transparent;
+                                border-right:5px solid transparent;
+                            }
+                            &:hover {
+                                &::after {
+                                    display:block;
+                                }
+                                + .tooltip-cont {
+                                    display:block;
+                                }
+                            }
+                        }
+                        .tooltip-cont {
+                            display:none;
+                            position:absolute;
+                            left:50%;
+                            bottom:100%;
+                            width:240px;
+                            margin-left:-160px;
+                            margin-bottom:10px;
+                            padding:10px;
+                            border:2px solid $yellow;
+                            border-radius:4px;
+                            background:#fff;
+                            color:$basic;
+                            font-size:14px;
+                            line-height:18px;
+                            em {
+                                color:$red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* insu calc result list */
+.smcard-lists-wrap {
+    overflow:hidden;
+    ul.lists {
+        display:flex;
+        flex-wrap:wrap;
+        border-left:1px solid $border;
+        li {
+            width:50%;
+            border-top:1px solid $border;
+            border-right:1px solid $border;
+            border-bottom:1px solid $border;
+            &:nth-child(2) ~ li {
+                border-top:none;
+            }
+            .inner {
+                position:relative;
+                padding:40px 20px 20px;
+                .flags {
+                    position:absolute;
+                    top:-1px;
+                    right:0;
+                }
+                .ci {
+                    display:block;
+                    height:40px;
+                    text-align:center;
+                    img {
+                        max-height:35px;
+                    }
+                }
+                .price-wrap {
+                    @include clearfix;
+                    .mon {
+                        float:left;
+                        @include font16;
+                        font-weight:500;
+                    }
+                    .price {
+                        float:right;
+                        @include font16;
+                        font-weight:500;
+                        em {
+                            margin-right:5px;
+                            color:$yellow;
+                            font-size:21px;
+                            font-weight:700;
+                            letter-spacing:1px;
+                        }
+                    }
+                }
+                .calc-impossible {
+                    font-size:0;
+                    text-align:center;
+                    .cant {
+                        display:inline-block;
+                        vertical-align:middle;
+                        font-size:16px;
+                        line-height:26px;
+                        color:$red;
+                        font-weight:500;
+                    }
+                    .tooltip-wrap {
+                        display:inline-block;
+                        vertical-align:middle;
+                        width:18px;
+                        height:18px;
+                        margin-left:7px;
+                        border-radius:50%;
+                        background:$basic;
+                        font-size:0;
+                        color:#fff;
+                        &::before {
+                            display:inline-block;
+                            content:'?';
+                            font-size:13px;
+                            line-height:18px;
+                            vertical-align:top;
+                            text-indent:-1px;
+                        }
+                    }
+                }
+                .btn {
+                    display:block;
+                    margin-top:20px;
+                    &:hover {
+                        background:$point;
+                        border-color:$point;
+                        color:#fff;
+                        font-weight:700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* insu info list */
+.insu-info-list {
+    > li {
+        margin-top:15px;
+        &:first-child {
+            margin-top:0;
+        }
+        .tit {
+            position:relative;
+            padding-left:23px;
+            @include font14;
+            font-weight:500;
+            word-break:keep-all;
+            .num {
+                position:absolute;
+                top:2px;
+                left:0;
+                width:14px;
+                height:14px;
+                border-radius:2px;
+                background:$point;
+                color:#fff;
+                text-align:center;
+                font-size:10px;
+                line-height:14px;
+                font-weight:500;
+            }
+        }
+        .bullet-list {
+            margin-top:6px;
+            margin-left:23px;
+        }
+    }
+}
+
+/* insu promotion list */
+.promotion-lists {
+    overflow:hidden;
+    .lists {
+        margin:-20px 0 0 -10px;
+        font-size:0;
+        > li {
+            display:inline-block;
+            vertical-align:top;
+            width:50%;
+            margin-top:20px;
+            padding-left:10px;
+            a.inner {
+                display:block;
+                text-align:center;
+                .title {
+                    margin-top:10px;
+                    @include font14;
+                    font-weight:500;
+                }
+                .desc {
+                    margin-top:6px;
+                    @include font13;
+                    color:$cont;
+                    word-break:keep-all;
+                }
+            }
+        }
+    }
+}
+
+/* calc step list */
+.calc-step-wrap {
+    ol.steps {
+        > li {
+            border-bottom:1px solid $border;
+            margin-bottom:50px;
+            padding-bottom:50px;
+            &:nth-child(1) {
+                .inner .tit::before {
+                    content:'01.'
+                }
+            }
+            &:nth-child(2) {
+                .inner .tit::before {
+                    content:'02.'
+                }
+            }
+            &:nth-child(3) {
+                .inner .tit::before {
+                    content:'03.'
+                }
+            }
+            &:nth-child(4) {
+                .inner .tit::before {
+                    content:'04.'
+                }
+            }
+        }
+    }
+    .inner {
+        @include clearfix;
+        .tit {
+            float:left;
+            position:relative;
+            width:310px;
+            padding-left:50px;
+            @include font24;
+            em {
+                color:$point;
+                font-weight:500;
+            }
+            small {
+                display:block;
+                margin-top:15px;
+                @include font14;
+                color:$cont;
+            }
+            &::before {
+                content:' ';
+                position:absolute;
+                top:0;
+                left:0;
+                color:#bbb;
+                @include font20;
+                font-family:'Roboto';
+                font-weight:900;
+                letter-spacing:1px;
+            }
+        }
+        .cont {
+            margin-left:310px;
+            .slt-lists {
+                &.type2 {
+                    .rdo-btn-wrap input + label {
+                        min-width:200px;
+                    }
+                }
+            }
+            .form-wrap {
+                @include clearfix;
+                .row:first-child {
+                    border-top:none;
+                    padding-top:0;
+                }
+                .row {
+                    float:left;
+                    &:nth-child(odd) {
+                        width:425px;
+                    }
+                    &:nth-child(even) {
+                        margin-left:25px;
+                        width:340px;
+                    }
+                    &:nth-child(2) {
+                        margin-top:0;
+                    }
+                    &.full {
+                        float:none;
+                        clear:both;
+                        margin-top:0;
+                        margin-left:0;
+                        padding-top:20px;
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* bullet list */
+.bullet-list {
+    .b-tit {
+        margin-bottom:5px;
+        font-weight:700;
+        color:$basic;
+    }
+    .b-txt {
+        position:relative;
+        margin-top:6px;
+        padding-left:8px;
+        @include font13;
+        color:$cont;
+        word-break:keep-all;
+        &:first-child {
+            margin-top:0;
+        }
+        &::before {
+            content:' ';
+            position:absolute;
+            top:8px;
+            left:0;
+            width:4px;
+            height:4px;
+            border-radius:2px;
+            background:$point;
+        }
+        em {
+            font-weight:700;
+            color:$point;
+        }
+    }
+    &.icon {
+        .b-txt {
+            padding-left:18px;
+            &::before {
+                content:'※';
+            }
+        }
+    }
+    &.red {
+        .b-txt {
+            @include font13;
+            color:$red;
+            &::before {
+                background:$red;
+            }
+        }
+    }
+    &.bar {
+        .b-txt {
+            padding-left:8px;
+            color:$cont;
+            margin-top:6px;
+            color:$gray;
+            &:first-child {
+                margin-top:0;
+            }
+            &::before {
+                content:'-';
+                top:0;
+                left:0;
+                width:10px;
+                height:18px;
+                background:transparent;
+            }
+        }
+    }
+}
+
+/* bullet dl */
+.bullet-dl {
+    dt {
+        position:relative;
+        padding-left:12px;
+        @include font13;
+        color:$point;
+        font-weight:700;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:7px;
+            left:0;
+            width:4px;
+            height:4px;
+            background: $point;
+            border-radius:2px;
+        }
+    }
+    dd {
+        margin-top:6px;
+        padding-left:12px;
+        @include font12;
+        color:$basic;
+        word-break:keep-all;
+    }
+}

@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+/* tab */
+.border-tab-wrap {
+    position:relative;
+    &::before {
+        content:' ';
+        position:absolute;
+        left:0;
+        right:0;
+        bottom:0;
+        height:1px;
+        background:$basic;
+    }
+    &.type2::before {
+        background:$point;
+    }
+    .tabs {
+        position:relative;
+        display:flex;
+        li {
+            width:40%;
+            border-top:1px solid $basic;
+            border-left:1px solid #fff;
+            overflow:hidden;
+            &:first-child {
+                border-left-color:$basic;
+                border-top-left-radius:4px;
+            }
+            &:last-child {
+                border-right:1px solid $basic;
+                border-top-right-radius:4px;
+            }
+            a {
+                display:block;
+                height:39px;
+                background:$basic;
+                color:#bbb;
+                font-size:13px;
+                font-weight:500;
+                text-align:center;
+                line-height:38px;
+            }
+            &.active {
+                border-color:$basic;
+                border-bottom-color:#fff;
+                a {
+                    background:#fff;
+                    color:$point;
+                }
+                & + li {
+                    border-left-color:$basic;
+                }
+            }
+        }
+    }
+    &.type2 {
+        .tabs {
+            li {
+                border-top-color:$point;
+                border-left-color:#91b9f5;
+                &:first-child {
+                    border-left-color:$point;
+                }
+                a {
+                    background:$point;
+                    color:#91b9f5;
+                }
+                &.active {
+                    border-color:$point;
+                    border-bottom-color:#fff;
+                    a {
+                        background:#fff;
+                        color:$point;
+                    }
+                    & + li {
+                        border-left-color:$point;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ci-tab-wrap {
+    text-align:center;
+    .tabs {
+        display:inline-block;
+        vertical-align:top;
+        font-size:0;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            margin-left:15px;
+            &:first-child {
+                margin-left:0;
+            }
+            a {
+                display:block;
+                width:170px;
+                text-align:center;
+                line-height:56px;
+                border:1px solid $border;
+                border-radius:4px;
+                img {
+                    width:auto;
+                    max-height:34px;
+                    vertical-align:middle;
+                }
+            }
+            &.active {
+                a {
+                    border-color:$basic;
+                }
+            }
+        }
+    }
+}
+
+// 보험기획관 page tab
+.planning-tab-wrap {
+    width:1200px;
+    margin:0 auto;
+    overflow:hidden;
+    .tabs {
+        margin:-10px 0 0 -10px;
+        font-size:0;
+        li {
+            display:inline-block;
+            width:25%;
+            margin-top:10px;
+            padding-left:10px;
+            a {
+                position:relative;
+                display:block;
+                border:1px solid $border;
+                border-radius:4px;
+                padding:13px 60px 13px 30px;
+                background:#fff;
+                @include font18;
+                color:$gray;
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    right:30px;
+                    margin-top:-12px;
+                    width:25px;
+                    height:25px;
+                    border-radius:50%;
+                    background:$border;
+                }
+                span {
+                    &::before, 
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        right:42px;
+                        width:1px;
+                        height:9px;
+                        margin-top:-4px;
+                        background:$gray;
+                    }
+                    &::after {
+                        transform:rotate(90deg);
+                    }
+                }
+                &:hover {
+                    border-color:$point;
+                    color:$point;
+                    &::before {
+                        background:$point;
+                    }
+                    span {
+                        &::before,
+                        &::after {
+                            background:#fff;
+                        }
+                    }
+                }
+                &.active {
+                    background:$point;
+                    border-color:$point;
+                    color:#fff;
+                    &::before {
+                        background:$point2;
+                    }
+                    span {
+                        &::before,
+                        &::after {
+                            background:#fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 공지사항 page tab
+.button-tab-wrap {
+    position:relative;
+    overflow:hidden;
+    &.scroll {
+        padding-right:70px;
+        .scroll-btns {
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            width:70px;
+            background:#fff;
+            font-size:0;
+            button {
+                position:relative;
+                display:inline-block;
+                width:35px;
+                height:100%;
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    width:14px;
+                    height:14px;
+                    margin-top:-7px;
+                    border:2px solid $gray;
+                    border-top:none;
+                    border-left:none;
+                }
+                &.btn-prev::before {
+                    transform:rotate(135deg);
+                    margin-left:-4px;
+                }
+                &.btn-next::before {
+                    transform:rotate(-45deg);
+                    margin-left:-9px;
+                }
+                &.disabled {
+                    opacity:.3;
+                }
+            }
+        }
+    }
+    .tabs {
+        font-size:0;
+        text-align:center;
+        white-space:nowrap;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            margin-left:12px;
+            &:first-child {
+                margin-left:0;
+            }
+            a {
+                display:block;
+                min-width:140px;
+                height:45px;
+                padding:10px 30px;
+                border-radius:23px;
+                background:$blur;
+                font-size:16px;
+                line-height:25px;
+                color:$gray;
+                text-align:center;
+            }
+            &.active a {
+                background:$point;
+                color:#fff;
+            }
+        }
+    }
+}
+
+// sorting tab
+.sorting-tabs {
+    position:relative;
+    overflow-x:auto;
+    font-size:0;
+    white-space:nowrap;
+    background:#fff;
+    li {
+        display:inline-block;
+        vertical-align:top;
+        border:1px solid $border;
+        border-left:none;
+        &:first-child {
+            border-left:1px solid $border;
+        }
+        &.active {
+            border-color:$point2;
+            a {
+                background:$point2;
+                color:#fff;
+            }
+        }
+        a {
+            display:block;
+            padding:0 10px;
+            height:33px;
+            background:$bg;
+            color:$cont;
+            font-size:13px;
+            line-height:33px;
+            font-weight:500;
+        }
+    }
+}

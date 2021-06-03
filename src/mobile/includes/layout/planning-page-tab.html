@@ -1,0 +1,15 @@
+<div class="planning-page-tabs">
+    @@include('./layout/page-title.html', {
+        title : '<em>보험</em>기획관'
+    })
+    <div class="planning-tab-wrap">
+        <ul class="tabs">
+            <li><a href="/mobile/page/sub_04_01.html"@@if(context.sub0401){ class="active"}><span>보장별 기획</span></a></li>
+            <li><a href="/mobile/page/sub_04_02.html"@@if(context.sub0402){ class="active"}><span>보험별 기획</span></a></li>
+            <li><a href="/mobile/page/sub_04_03.html"@@if(context.sub0403){ class="active"}><span>무해지보험 기획관</span></a></li>
+            <li><a href="/mobile/page/sub_04_04.html"@@if(context.sub0404){ class="active"}><span>치아보험 기획관</span></a></li>
+            <li><a href="/mobile/page/sub_04_05.html"@@if(context.sub0405){ class="active"}><span>유병자보험 기획관</span></a></li>
+            <li><a href="/mobile/page/sub_04_06.html"@@if(context.sub0406){ class="active"}><span>운전자보험 기획관</span></a></li>
+        </ul>
+    </div>
+</div>

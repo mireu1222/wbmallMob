@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/* main */
+.container.main {
+    // main visual
+    .main-visual {
+        .swiper-pagination {
+            font-size:0;
+            bottom:15px;
+            .swiper-pagination-bullet {
+                width:4px;
+                height:4px;
+                margin:0 3px;
+                background:#fff;
+                vertical-align:middle;
+                &.swiper-pagination-bullet-active {
+                    width:6px;
+                    height:6px;
+                    margin:0 2px;
+                }
+            }
+        }
+    }
+
+    // sections
+    .section01,
+    .section02,
+    .section03 {
+        margin-top:11px;
+        padding:30px 12px;
+        background:#fff;
+        box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.12);
+        .tit-wrap {
+            margin-bottom:15px;
+            .tit {
+                font-size:18px;
+                line-height:1.2;
+                font-weight:700;
+            }
+            .desc {
+                margin-top:8px;
+                @include font13;
+                color:$gray;
+            }
+        }
+    }
+
+    // section01
+    .section01 {
+        margin-top:0;
+        .border-tab-contents {
+            padding-top:13px;
+            .insu-lists {
+                li {
+                    margin-top:8px;
+                    &:first-child {
+                        margin-top:0;
+                    }
+                    a.inner {
+                        display:block;
+                        position:relative;
+                        width:100%;
+                        height:auto;
+                        min-height:107px;
+                        @include calcs(padding-top, 200px, 592px);
+                        border-radius:8px;
+                        overflow:hidden;
+                        background: {
+                            repeat:no-repeat;
+                            size:cover;
+                            position:center;
+                        }
+                        @for $i from 1 through 4 {
+                            &.insu#{$i} {
+                                background-image:url('/mobile/images/bg/bg-main#{$i}.jpg');
+                            }
+                        }
+                        .text {
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            right:0;
+                            padding:15px 15px 0;
+                            .cate {
+                                @include font14;
+                                font-weight:500;
+                            }
+                            .cont {
+                                margin-top:5px;
+                                @include font13;
+                                color:$cont;
+                            }
+                        }
+                        &.white {
+                            .text {
+                                .cate,
+                                .cont {
+                                    color:#fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .link-lists {
+        position:relative;
+        overflow:hidden;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            border:1px solid $border;
+            border-radius:2px;
+        }
+        li {
+            position:relative;
+            border-top:1px solid $border;
+            &:first-child {
+                border-top:none;
+                a {
+                    border-radius:2px 2px 0 0;
+                }
+            }
+            &:last-child {
+                a {
+                    border-radius:0 0 2px 2px;
+                }
+            }
+            a {
+                position:relative;
+                display:block;
+                height:40px;
+                padding:0 20px 0 10px;
+                @include font13;
+                line-height:40px;
+                @include textEllipsis;
+                &::after {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    right:13px;
+                    width:5px;
+                    height:8px;
+                    margin-top:-4px;
+                    background:url('/mobile/images/icon/icon-arrow-right.png') center no-repeat;
+                    background-size:100%;
+                }
+                &:active,
+                &:focus {
+                    color:#fff;
+                    background-color:$point;
+                    &::after {
+                        background-image:url('/mobile/images/icon/icon-arrow-right-wt.png');
+                    }
+                }
+            }
+        }
+    }
+}

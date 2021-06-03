@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container promotion">
+            <div class="sections">
+                @@include('./layout/page-title.html', {
+                    title : '보험기획관',
+                })
+                <!-- 화면이동 -->
+                <div class="select-dropdown ui-dropdown">
+                    <a href="#n" class="btn-toggle"><span class="blind">현재 페이지</span>보장별 기획<span class="blind">페이지 목록 보기</span></a>
+                    <ul class="lists">
+                        <li class="active"><a href="/mobile/page/sub_04_01.html">보장별 기획</a></li>
+                        <li><a href="/mobile/page/sub_04_02.html">보험별 기획</a></li>
+                        <li><a href="/mobile/page/sub_04_03.html">무해지보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_04.html">치아보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_05.html">유병자보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_06.html">운전자보험기획관</a></li>
+                    </ul>
+                </div>
+                <!-- // 화면이동 -->
+                @@include('./modules/promotion-list.html', {
+                    img : 'img-insu',
+                    lists : [
+                        {
+                            link : '/mobile/page/sub_04_01_view01.html',
+                            title : '무해지환급형',
+                            desc : '보험료는 줄이고, 보장은 그대로 보험에 가입하자!',
+                        }, {
+                            link : '/mobile/page/sub_04_01_view02.html',
+                            title : '의료실비보장',
+                            desc : '병원치료비 가입금액 한도 내 보장으로 의료비를 줄이자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view03.html',
+                            title : '암치료비보장',
+                            desc : '100세 시대 생존기간과 치료비를 고려한 암보험은 필수다!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view04.html',
+                            title : '치과치료비용보장',
+                            desc : '고액의 치과치료비에 대한 부담을 줄이자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view05.html',
+                            title : '병원비부담보장',
+                            desc : '실손의료보험으로 병원비를 보상받고, 병원비부담 확 줄이자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view06.html',
+                            title : '뇌혈관과 심장질환 보장',
+                            desc : '치료비가 많이 드는 질환에 대하여 미리 보험으로 준비하자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view07.html',
+                            title : '운전자 필수 보장',
+                            desc : '교통사고 발생시 운전자인 나의 치료비, 합의금, 변호사비 등을 보장받자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view08.html',
+                            title : '유병자에도 보장',
+                            desc : '고령자, 당뇨병, 고혈압 환자도 3가지만 없다면 가입하자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view09.html',
+                            title : '가족보장',
+                            desc : '사고와 질병 등 가족을 위한 필수 보험을 준비하자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view10.html',
+                            title : '여성보장',
+                            desc : '여성에서 많이 생기는 사고와 질병을 미리미리 준비하고 보장받자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view11.html',
+                            title : '남성보장',
+                            desc : '남성에게 많이 생기는 사고와 질병을 미리미리 준비하고 보장받자!'
+                        }, {
+                            link : '/mobile/page/sub_04_01_view12.html',
+                            title : '미래보장',
+                            desc : '100세 시대, 미리미리 젊었을 때 준비하고, 미래를 보장받자!'
+                        }
+                    ]
+                })
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

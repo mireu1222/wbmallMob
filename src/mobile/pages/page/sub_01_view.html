@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            sub01 : true,
+            depth2 : 'sub01'
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container products">
+            <ul class="sorting-tabs" data-evt="button-tab">
+                <li class="active"><a href="#n">암보험</a></li>
+                <li><a href="#n">수술/입원비보험</a></li>
+                <li><a href="#n">신생아보험</a></li>
+                <li><a href="#n">어린이보험</a></li>
+                <li><a href="#n">유병자보험</a></li>
+                <li><a href="#n">의료실비보험</a></li>
+                <li><a href="#n">정기보험</a></li>
+                <li><a href="#n">종신보험</a></li>
+                <li><a href="#n">연금/연금저축보험</a></li>
+                <li><a href="#n">운전자/상해보험</a></li>
+                <li><a href="#n">주택화재보험</a></li>
+                <li><a href="#n">치아보험</a></li>
+                <li><a href="#n">치매간병보험</a></li>
+                <li><a href="#n">변액보험/변액연금</a></li>
+                <li><a href="#n">저축보험</a></li>
+            </ul>
+            <div class="sections first">
+                @@include('./layout/page-title.html', {
+                    title : '암보험'
+                })
+                <!-- sorting button tab -->
+                <div class="border-tab-wrap">
+                    <ul class="tabs" data-evt="button-tab">
+                        <li class="active"><a href="#n">전체</a></li>
+                        <li><a href="#n">비갱신형 보험</a></li>
+                        <li><a href="#n">갱신형 보험</a></li>
+                    </ul>
+                </div>
+                <!-- // sorting button tab -->
+                <!-- list content area -->
+                <div class="card-lists-wrap view-type">
+                    <ul class="lists">
+                        @@loop('./modules/card-lists.html', [
+                            {
+                                img : 'ci01.png',
+                                alt : 'MG손해보험',
+                                title : '보험명이 들어갑니다. 상세화면에서는 보험명이 다 노출됨.', 
+                                ex : '※상품개정으로 인하여 보장내용 및 보험료가 달라질 수 있습니다.',
+                                more : true,
+                                link : '/mobile/page/sub_01_view.html',
+                                btnSize2 : true
+                            }
+                        ])
+                    </ul>
+                </div>
+                <!-- // list content area -->
+                <!-- 상품 정보 -->
+                <div class="insu-detail-body">
+                    <!-- 상세정보 리스트 -->
+                    @@include('./modules/insu-info-list.html')
+                    <!-- // 상세정보 리스트 -->
+
+                    <!-- 보장내용/가입예시/가입안내 -->
+                    <ul class="insu-moreinfo">
+                        <li><a href="javascript:popupOpen('/mobile/page/popup_sub01_view01.html', '보장내용')" title="새창열림"><span>보장내용</span></a></li>
+                        <li><a href="javascript:popupOpen('/mobile/page/popup_sub01_view02.html', '가입예시/가입안내')" title="새창열림"><span>가입예시/가입안내</span></a></li>
+                    </ul>
+                    <!-- // 보장내용/가입예시/가입안내 -->
+
+                    <a href="javascript:popupOpen('/mobile/page/popup_01.html', '무료상담신청')" class="btn block point md"><span>무료 상담 신청하기</span></a>
+                </div>
+                <!-- // 상품 정보 -->
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+
+        <!-- modal -->
+        @@include('./modules/modal.html', {
+            id : 'modal01'
+        })
+        @@include('./modules/modal.html', {
+            id : 'modal02'
+        })
+        <!-- // modal -->
+    </div>
+</body>
+</html>

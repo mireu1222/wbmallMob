@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+/* modal */
+.modal-wrap {
+    display:none;
+    width:calc(100% - 26px);
+    position:relative;
+    vertical-align:middle;
+    padding:30px 12px;
+    background:#fff;
+    border-top:3px solid $yellow;
+    z-index:1000;
+    overflow:hidden;
+    text-align:center;
+    .close-modal {
+        display:none !important;
+    }
+    &.complete {
+        border-color:$point;
+    }
+    &.calcs {
+        text-align:left;
+    }
+    .modal-contents {
+        // 로딩
+        .txt {
+            margin-top:10px;
+            @include font12;
+            &:first-child {
+                margin-top:0;
+            }
+            em {
+                color:$yellow;
+                font-weight:700;
+            }
+            &.big {
+                @include font13;
+            }
+        }
+        // 보험계산 완료
+        .calc-complete {
+            .tit {
+                &::before {
+                    content:' ';
+                    display:block;
+                    width:24px;
+                    height:30px;
+                    background:url('/mobile/images/icon/icon-calc.png') center no-repeat;
+                    background-size:100%;
+                    margin:0 auto 14px;
+                }
+                font-size:17px;
+                line-height:1.3;
+                font-weight:500;
+                em {
+                    color:$yellow;
+                }
+            }
+            .desc {
+                margin-top:6px;
+                @include font12;
+                em {
+                    font-weight:500;
+                }
+            }
+            .btn {
+                width:150px;
+                margin:20px auto 0;
+            }
+        }
+        // 보험설계조건
+        .calc-title {
+            .tit {
+                font-size:17px;
+                line-height:1.2;
+                font-weight:700;
+            }
+            .desc {
+                margin-top:6px;
+                @include font13;
+                color:$gray;
+            }
+        }
+        .calc-top-wrap {
+            margin-top:25px;
+            border:1px solid $border;
+            border-radius:8px;
+            @include boxShadow;
+            overflow:hidden;
+            .insu-pp-cont {
+                padding:20px 20px 15px;
+                .pp-insu {
+                    .tit {
+                        @include font13;
+                        font-weight:500;
+                        small {
+                            display:block;
+                            margin-top:5px;
+                            @include font11;
+                            color:$point;
+                        }
+                    }
+                    .price-wrap {
+                        margin-top:15px;
+                        @include clearfix;
+                        .cate {
+                            float:left;
+                            font-size:16px;
+                            line-height:24px;
+                            font-weight:700;
+                        }
+                        .price {
+                            float:right;
+                            text-align:right;
+                            font-size:13px;
+                            line-height:24px;
+                            font-weight:500;
+                            span {
+                                display:inline-block;
+                                vertical-align:bottom;
+                                margin-right:4px;
+                                font-size:16px;
+                                em {
+                                    font-size:21px;
+                                    font-weight:700;
+                                    color:$yellow;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .requirement {
+                padding:20px;
+                background:$border2;
+                .tit {
+                    @include font13;
+                    font-weight:500;
+                }
+                .default {
+                    text-align:center;
+                }
+                .result {
+                    position:relative;
+                    .tit {
+                        padding:2px 0;
+                    }
+                    .req-list {
+                        > li {
+                            margin-top:12px;
+                            &:first-child {
+                                margin-top:0;
+                            }
+                        }
+                        margin-top:10px;
+                        dt {
+                            @include font12;
+                            margin-bottom:8px;
+                            font-weight:500;
+                        }
+                    }
+                    .btn.refresh {
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        padding-left:30px;
+                        span {
+                            display:inline-block;
+                            vertical-align:top;
+                            line-height:17px;
+                        }
+                        &::before {
+                            content:' ';
+                            position:absolute;
+                            left:10px;
+                            top:50%;
+                            margin-top:-7px;
+                            width:13px;
+                            height:13px;
+                            background:url('/mobile/images/icon/icon-refresh.png') center no-repeat;
+                            background-size:100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div id="popup">
+        <!-- popup header -->
+        @@include('./layout/popup-header.html', {
+            title : '실시간 보험문의 답변'
+        })
+        <!-- // popup header -->
+
+        <!-- popup container -->
+        <div class="popup-container">
+            <div class="sections">
+                <div class="tit-wrap">
+                    <h2 class="tit">실시간 보험문의 답변</h2> 
+                </div>
+                <div class="answer-top">
+                    <div class="by">
+                        <span class="thumb" aria-hidden="true"><img src="/mobile/images/@cnst.jpg" alt=""></span>
+                        <p class="name"><span class="blind">답변 작성자</span><em>정예진</em>컨설턴트</p>
+                    </div>
+                    <p class="cont"><span class="blind">답변 내용</span>컨설턴트가 작성한 답변내용이 들어갑니다. 컨설턴트가 작성한 답변내용이 들어갑니다. 컨설턴트가 작성한 답변내용이 들어갑니다. </p>
+                </div>
+                <div class="form-wrap">
+                    <div class="form-title">
+                        <p class="desc">도움이 되셨나요? 더욱 더 자세한 문의를 원하시면<br><em>정예진</em> 컨설턴트에게 문의주세요^^</p>
+                    </div>
+                    <div class="row type2">
+                        <div class="col">
+                            <label for="ipt-name">성함</label>
+                            <div class="forms">
+                                <span class="input-wrap">
+                                    <input type="text" id="ipt-name" placeholder="이름">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="slt-gender">성별</label>
+                            <div class="forms">
+                                <span class="selectbox-wrap">
+                                    <select id="slt-gender" class="nice-select">
+                                        <option value="" data-placeholder="true">성별을 선택하세요</option>
+                                        <option value="">남성</option>
+                                        <option value="">여성</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-birth">생년월일</label>
+                        <div class="forms birth-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-birth" placeholder="(예시 : 19720717)" maxlength="8">
+                            </span>
+                            <div class="year">보험나이 <em>99</em>세</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-phone">휴대폰번호</label>
+                        <div class="forms phone-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-phone" placeholder="'-'제외 숫자입력">
+                            </span>
+                            <button type="button" class="btn point"><span>인증번호</span></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-phone-num">인증번호</label>
+                        <div class="forms phone-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-phone-num">
+                            </span>
+                            <span class="time">03:00</span>
+                            <button type="button" class="btn point" disabled><span>인증완료</span></button>
+                            <!-- <button type="button" class="btn point"><span>인증완료</span></button> 인증번호 입력 후 disabled 삭제 -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-cont">상담내용</label>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <textarea></textarea>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="check-wrap">
+                            <span class="chk-wrap">
+                                <input type="checkbox" id="agree" name="agree">
+                                <label for="agree">개인정보수집 및 활용동의</label>
+                            </span>
+                            <a href="#n" class="btn point round small"><span>보기</span></a>
+                        </div>
+                        <p class="form-msg text-center">※ 고객정보는 당사 외 <em>제3자에게 절대 제공하지 않습니다.</em></p>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn point md"><span>무료 상담 신청하기</span></button>
+                    </div>
+                </div>
+                <div class="answer-by-profile">
+                    <div class="by">
+                        <span class="thumb" aria-hidden="true"><img src="/mobile/images/@cnst.jpg" alt=""></span>
+                        <p class="name"><em>정예진</em>컨설턴트</p>
+                    </div>
+                    <ul class="pp-info">
+                        <li><span>H.P</span>010.1234.5678</li>
+                        <li><span>직통번호</span>02.8765.4321</li>
+                        <li><span>FAX</span>02.8765.4321</li>
+                        <li><span>E-mail</span>jyj@woori.co.kr</li>
+                    </ul>
+                    <dl>
+                        <dt>경력사항</dt>
+                        <dd>손해보험, 생명보험 경력 17년, 우리인슈맨 보험보장분석 및 보험 리모델링</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- // popup container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+
+        <button type="button" class="popup-close" onclick="window.close();"><span class="blind">팝업 닫기</span></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/* 고객센터 */
+.container.cust-center {
+    border-top:1px solid $border;
+    .tab-contents {
+        padding-top:45px;
+    }
+    .board-view {
+        .board-head {
+            border-top:1px solid $basic;
+            border-bottom:1px solid $border;
+            padding:30px 20px;
+            .title {
+                @include font26;
+            }
+            .infos {
+                margin-top:10px;
+                font-size:0;
+                li {
+                    display:inline-block;
+                    vertical-align:top;
+                    @include font15;
+                    color:$gray;
+                    &::before {
+                        content:' ';
+                        display:inline-block;
+                        vertical-align:top;
+                        width:1px;
+                        height:10px;
+                        margin:7px 10px 0;
+                        background:$border;
+                    }
+                    &:first-child::before {
+                        display:none;
+                    }
+                }
+            }
+        }
+        .board-body {
+            border-bottom:1px solid $border;
+            padding:30px 20px 80px;
+            @include font14;
+        }
+        .btn {
+            display:block;
+            width:150px;
+            margin:40px auto 0;
+        }
+    }
+}

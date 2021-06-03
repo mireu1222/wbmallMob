@@ -1,0 +1,15 @@
+@@if (!context.title) {
+<ul class="bullet-list@@if(context.type){ @@type}">
+    @@for (var i=0; i < text.length; i++) {
+    <li class="b-txt">`+text[i]+`</li>
+    }
+</ul>
+}
+@@if (context.title) {
+<dl class="bullet-list@@if(context.type){ @@type}">
+    <dt class="b-tit">@@title</dt>
+    @@for (var i=0; i < text.length; i++) {
+    <dd class="b-txt">`+text[i]+`</dd>
+    }
+</dl>
+}

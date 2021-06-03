@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* 보험기획관 */
+.container.promotion {
+    border-top:1px solid $border;
+    .pr-type2-contents {
+        .pr-bodys {
+            .insu-promotion-box {
+                margin-top:11px;
+                padding:30px 12px;
+                background:#fff;
+                box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.12);
+                &:nth-child(3n+1) {
+                    .insu-cate {
+                        color:$point;
+                        &::before {
+                            background:$point;
+                        }
+                    }
+                }
+                &:nth-child(3n+2) {
+                    .insu-cate {
+                        color:$yellow;
+                        &::before {
+                            background:$yellow;
+                        }
+                    }
+                }
+                &:nth-child(3n+3) {
+                    .insu-cate {
+                        color:$mint;
+                        &::before {
+                            background:$mint;
+                        }
+                    }
+                }
+                .insu-cate {
+                    text-align:center;
+                    font-size:18px;
+                    line-height:1.3;
+                    font-weight:700;
+                    &::before {
+                        content:' ';
+                        display:block;
+                        width:20px;
+                        height:3px;
+                        margin:0 auto 10px;
+                    }
+                }
+                .insu-desc {
+                    margin-top:10px;
+                    @include font13;
+                    text-align:center;
+                    word-break:keep-all;
+                }
+                .bullet-list {
+                    margin-top:10px;
+                    padding-top:10px;
+                    border-top:1px solid $border;
+                    li {
+                        margin-top:3px;
+                        color:$basic;
+                        &:first-child {
+                            margin-top:0;
+                        }
+                    }
+                }
+                .promotion-insus {
+                    margin-top:25px;
+                    border:1px solid $border;
+                    border-radius:8px;
+                    @include boxShadow;
+                    text-align:center;
+                    .insu {
+                        padding:20px;
+                        border-top:1px solid $border;
+                        &:first-child {
+                            border-top:none;
+                        }
+                        &:nth-child(even) {
+                            background:$border2;
+                        }
+                    }
+                    .ci {
+                        display:block;
+                    }
+                    .name {
+                        margin-top:10px;
+                        @include font13;
+                        font-weight:500;
+                    }
+                    .btn {
+                        margin:10px auto 0;
+                    }
+                }
+            }
+        }
+    }
+    .insu-titles {
+        margin-bottom:15px;
+        .thumb-tit {
+            position:relative;
+            @include calcs(padding-top, 260px, 592px);
+            margin-bottom:15px;
+            background:url('/mobile/images/bg/bg-promotion.jpg') center no-repeat;
+            background-size:100%;
+            .text {
+                position:absolute;
+                top:20px;
+                left:20px;
+                .t-tit {
+                    font-size:18px;
+                    line-height:1.3;
+                    color:#584e7c;
+                    em {
+                        font-weight:700;
+                    }
+                }
+                .t-desc {
+                    margin-top:5px;
+                    @include font13;
+                    em {
+                        color:#584e7c;
+                        font-weight:700;
+                    }
+                }
+            }
+        }
+        .tit {
+            font-size:18px;
+            line-height:1.3;
+            font-weight:500;
+            color:$point;
+        }
+        .desc {
+            margin-top:6px;
+            @include font13;
+        }
+    }
+}

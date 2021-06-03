@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div id="popup">
+        <!-- popup header -->
+        @@include('./layout/popup-header.html', {
+            title : 'SMS인증'
+        })
+        <!-- // popup header -->
+
+        <!-- popup container -->
+        <div class="popup-container">
+            <div class="sections">
+                <div class="tit-wrap">
+                    <h2 class="tit">SMS인증</h2>
+                    <p class="desc">고객님의 휴대폰으로 인증번호를 전송중입니다.<br>잠시만 기다려주시기 바랍니다.</p>
+                </div>
+                <div class="form-wrap">
+                    <div class="row no-border">
+                        <label for="ipt-nums">인증번호</label>
+                        <div class="forms phone-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-nums">
+                            </span>
+                            <span class="time">03:00</span>
+                            <button type="button" class="btn point"><span>확인</span></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-nums-again">재인증요청</label>
+                        <div class="forms phone-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-nums-again">
+                            </span>
+                            <button type="button" class="btn point" disabled><span>인증완료</span></button>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <dl class="bullet-dl">
+                            <dt>SMS수신이 안되시나요?</dt>
+                            <dd>착신 관련 서비스에 가입되어 있는 경우 SMS 착신이 되지 않습니다.<br>스팸 설정이 되어있는 경우가 아닌지 확인해주세요.<br>(02-6288 국번으로 수신됩니다.)</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // popup container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+
+        <button type="button" class="popup-close" onclick="window.close();"><span class="blind">팝업 닫기</span></button>
+    </div>
+</body>
+</html>

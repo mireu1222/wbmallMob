@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/* pagination */
+.pagination {
+    margin-top:15px;
+    font-size:0;
+    text-align:center;
+    .control-btn, 
+    .page-btn-wrap,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        display:inline-block;
+        vertical-align:top;
+    }
+    .control-btn,
+    .page-btn-wrap .now,
+    .page-btn-wrap a {
+        width:23px;
+        height:23px;
+        border:1px solid transparent;
+        border-radius:50%;
+        font-size:12px;
+        color:$cont;
+        line-height:20px;
+        text-indent:-1px;
+        background:transparent;
+    }
+    .control-btn {
+        position:relative;
+        margin:0 2px;
+        border-color:$border;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:6px;
+            height:6px;
+            margin-top:-3px;
+            border:2px solid $gray;
+            border-bottom:none;
+            border-right:none;
+        }
+        &.prev {
+            &::before {
+                margin-left:-3px;
+                transform:rotate(-45deg);
+            }
+        }
+        &.next {
+            &::before {
+                margin-left:-4px;
+                transform:rotate(135deg);
+            }
+        }
+    }
+    .page-btn-wrap {
+        margin:0 15px;
+        > * {
+            margin:0 2px;
+        }
+        .now {
+            background:$point;
+            border-color:$point;
+            color:#fff;
+            font-weight:700;
+        }
+    }
+}

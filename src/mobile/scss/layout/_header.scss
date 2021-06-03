@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+/* header */
+header {
+    position:relative;
+    .head-top {
+        position:relative;
+        padding:0 12px;
+        background:$point;
+        .logo {
+            font-size:0;
+            a {
+                display:inline-block;
+                vertical-align:top;
+                padding:20px 0;
+                img {                    
+                    height:12px;
+                }
+            }
+        }
+        .btn-menu-all {
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            width:50px;
+            &::before,
+            &::after {
+                content:' ';
+                position:absolute;
+                top:50%;
+                right:12px;
+                width:20px;
+                height:2px;
+                background:#fff;
+                border-radius:1px;
+                transition:all 0.2s ease-out;
+            }
+            &::before {
+                margin-top:-7px;
+            }
+            &::after {
+                margin-top:5px;
+            }
+            .bar {
+                position:absolute;
+                top:50%;
+                right:12px;
+                width:20px;
+                height:2px;
+                margin-top:-1px;
+                background:#fff;
+                border-radius:1px;
+            }
+            &.open {
+                &::before {
+                    margin-top:-1px;
+                    transform:rotate(45deg);
+                }
+                &::after {
+                    margin-top:-1px;
+                    transform:rotate(-45deg);
+                }
+                .bar {
+                    display:none;
+                }
+            }
+        }
+    }
+    #gnb {
+        position:relative;
+        > ul {
+            overflow-x:auto;
+            white-space:nowrap;
+            font-size:0;
+            > li {
+                position:relative;
+                display:inline-block;
+                vertical-align:top;
+                width:33.33%;
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:50%;
+                    left:0;
+                    width:1px;
+                    height:10px;
+                    margin-top:-5px;
+                    background:$border;
+                }
+                &:first-child::before {
+                    display:none;
+                }
+                a {
+                    position:relative;
+                    display:block;
+                    height:39px;
+                    text-align:center;
+                    font-size:13px;
+                    line-height:39px;
+                    color:$gray;
+                }
+                &.active {
+                    a {
+                        color:$point;
+                        font-weight:500;
+                        &::after {
+                            content:' ';
+                            position:absolute;
+                            top:0;
+                            left:50%;
+                            height:0;
+                            margin-left:-5px;
+                            border-top:5px solid $point;
+                            border-left:5px solid transparent;
+                            border-right:5px solid transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .x-scroll {
+        overflow:hidden;
+    }
+    .depth2 {
+        position:relative;
+        font-size:0;
+        white-space:nowrap;
+        li {
+            display:inline-block;
+            vertical-align:top;
+            border:1px solid $border;
+            border-left:none;
+            &:first-child {
+                border-left:1px solid $border;
+            }
+            &.active {
+                border-color:$point2;
+                a {
+                    background:$point2;
+                    color:#fff;
+                }
+            }
+            a {
+                display:block;
+                padding:0 10px;
+                height:32px;
+                background:$bg;
+                color:$cont;
+                font-size:13px;
+                line-height:32px;
+                font-weight:500;
+            }
+        }
+    }
+    .sub-depth {
+        position:fixed;
+        top:52px;
+        left:100%;
+        bottom:0;
+        width:100%;
+        background:#fff;
+        z-index:1000;
+        overflow-y:auto;
+        transition:left 0.3s ease-out;
+        &.open {
+            left:0;
+        }
+        .more-dep1 {
+            > li {
+                > .dep1 {
+                    position:relative;
+                    display:block;
+                    padding:14px 20px;
+                    border-bottom:1px solid $border;
+                    @include font14;
+                    &::after {
+                        content:' ';
+                        position:absolute;
+                        top:50%;
+                        right:24px;
+                        width:8px;
+                        height:8px;
+                        margin-top:-5px;
+                        border:2px solid $gray;
+                        border-left:none;
+                        border-top:none;
+                        transform:rotate(45deg);
+                        transition:all 0.2s ease-out;
+                    }
+                }
+                &.open > .dep1::after {
+                    margin-top:-2px;
+                    transform:rotate(225deg);
+                }
+                .more-dep2 {
+                    display:none;
+                    padding:10px 26px;
+                    background:$blur;
+                    li {
+                        padding:2px 0;
+                        &:first-child {
+                            border-top:none;
+                        }
+                        a {
+                            display:block;
+                            color:$gray;
+                            padding:8px 0;
+                            @include font13;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

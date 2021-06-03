@@ -1,0 +1,24 @@
+<div class="thumb-list-wrap">
+    <ul class="lists">
+        @@for (var i=0; i < lists.length; i++) {
+            <li class="items">
+                @@if(!context.videoType) {
+                <a href="@@link" class="thumb" style="background-image:url('/mobile/images/@thumb01.jpg');">`+lists[i].title+` 자세히보기</a>
+                }
+                @@if(context.videoType) {
+                <a href="#video" class="thumb video" style="background-image:url('/mobile/images/@thumb01.jpg');" data-control="modal">`+lists[i].title+` 영상 보기</a>
+                }
+                <div class="info">
+                    @@if(context.videoType) {
+                    <p class="src" aria-hidden="true">`+lists[i].video+`</p>
+                    <a href="#video" class="tit" data-control="modal">`+lists[i].title+`</a>
+                    }
+                    @@if(!context.videoType) {
+                    <a href="@@link" class="tit">`+lists[i].title+`</a>
+                    }
+                    <p class="desc">`+lists[i].desc+`</p>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

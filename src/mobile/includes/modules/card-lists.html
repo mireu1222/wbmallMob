@@ -1,0 +1,52 @@
+<!-- loop -->
+<li>
+    <div class="inner">
+        @@if(context.flag) {
+        <span class="flags">BEST</span>
+        }
+        <div class="ci"><img src="/mobile/images/ci/@@img" alt="@@alt"></div>
+        <p class="tit">@@title</p>
+        @@if(context.condition) {
+        <div class="condition">
+            <span>@@condition</span>
+        </div>
+        }
+        @@if(context.desc) {
+        <p class="desc">@@desc</p>
+        }
+        @@if(context.ex) {
+        <p class="ex">@@ex</p>
+        }
+        @@if(context.more) {
+        <p class="more">손해보험협회 심의필 제123456(2021.07.09)</p>
+        }
+        @@if(!context.btnSize2) {
+        <div class="buttons">
+            <a href="javascript:popupOpen('/mobile/page/popup_01.html', '무료상담신청');" class="btn border2 md" title="새창열림"><span>무료상담신청</span></a>
+            <a href="javascript:popupOpen('/mobile/page/popup_02.html', '보험료계산');" class="btn point md" title="새창열림"><span>보험료계산</span></a>
+            <a href="@@link" class="btn point2 md"><span>상품 상세 정보</span></a>
+        </div>
+        }
+        @@if(context.btnSize2) {
+        <div class="buttons size2">
+            <a href="javascript:popupOpen('/mobile/page/popup_01.html', '무료상담신청');" class="btn border2 md" title="새창열림"><span>무료상담신청</span></a>
+            <a href="javascript:popupOpen('/mobile/page/popup_02.html', '보험료계산');" class="btn point md" title="새창열림"><span>보험료계산</span></a>
+        </div>
+        }
+    </div>
+    @@if(context.hover) {
+    <div class="hover">
+        <div class="cont">
+            <a href="#modal07" rel="modal:open" class="btn-preview"><span>미리보기</span></a>
+            <div class="compare">
+                <button type="button" class="btn-compare"><span>이 상품 비교하기</span></button>
+                <span class="tooltip-wrap">
+                    <span class="tooltip-target"><span class="bline">도움말</span></span>
+                    <span class="tooltip-cont">2~3개 상품을 선택하시고,<br>상단 보험종류 배너에 있는<br><em>'상품비교하기'</em> 버튼을 눌러주세요.</span>
+                </span>
+            </div>
+        </div>
+    </div>
+    }
+</li>
+<!-- // loop -->

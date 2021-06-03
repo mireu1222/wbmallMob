@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* box */
+.insu-intro-box {
+    border:1px solid $border;
+    border-radius:8px;
+    @include boxShadow;
+    padding:30px 20px;
+    text-align:center;
+    &.type2 {
+        border:none;
+        border-radius:0;
+        box-shadow:none;
+        padding:0;
+    }
+    .ci {
+        display:block;
+        margin-bottom:12px;
+    }
+    .name {
+        @include font14;
+        font-weight:500;
+    }
+    .price {
+        margin-top:10px;
+        margin-bottom:20px;
+        font-size:0;
+        text-align:center;
+        span, 
+        em {
+            display:inline-block;
+            vertical-align:middle;
+        }
+        span {
+            font-weight:500;
+            font-size:16px;
+            line-height:1.2;
+            &.small {
+                font-size:13px;
+            }
+        }
+        em {
+            margin:0 4px 0 6px;
+            font-size:21px;
+            font-weight:700;
+            color:$yellow;
+        }
+    }
+    .desc {
+        margin-top:12px;
+        @include font11;
+        color:$gray;
+    }
+    .btns {
+        margin-top:10px;
+        text-align:center;
+        .btn {
+            padding:0 20px;
+        }
+    }
+    .infos {
+        margin-top:12px;
+        padding-top:12px;
+        border-top:1px solid $border;
+        font-size:0;
+        text-align:left;
+        li {
+            display:inline-block;
+            width:50%;
+            vertical-align:top;
+            @include font12;
+            em {
+                margin-left:10px;
+                font-weight:500;
+            }
+        }
+    }
+}
+.border-box {
+    padding:20px 30px;
+    border:1px solid $border;
+    border-radius:10px;
+    &.no-radius {
+        border-radius:0;
+    }
+    &.bg-type {
+        background:$blur;
+    }
+}
+.shadow-box {
+    border-radius:10px;
+    background:#fff;
+    padding:50px;
+    @include boxShadow;
+}

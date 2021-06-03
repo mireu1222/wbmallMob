@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* 고객맞춤서비스 */
+.container.customers {
+    .insu-contents.bottom {
+        margin-top:30px;
+    }
+    .financial-lists {
+        li {
+            margin-top:8px;
+            &:first-child {
+                margin-top:0;
+            }
+            a {
+                display:block;
+                position:relative;
+                width:100%;
+                height:auto;
+                @include calcs(padding-top, 200px, 592px);
+                border-radius:8px;
+                overflow:hidden;
+                background-size:100%;
+                background-repeat:no-repeat;
+                @for $i from 1 through 8 {
+                    &.link0#{$i} {
+                        background-image:url('/mobile/images/bg/bg-info0#{$i}.png');
+                    }
+                }
+                .text {
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    padding:20px;
+                }
+                .title {
+                    @include font14;
+                    font-weight:500;
+                }
+                .desc {
+                    margin-top:8px;
+                    @include font13;
+                    color:$cont;
+                }
+                &.link02 {
+                    .title {
+                        color:#fff;
+                    }
+                    .desc {
+                        color:#bbb;
+                    }
+                }
+                &.link04 {
+                    .title {
+                        color:#fff;
+                    }
+                    .desc {
+                        color:#c0cadd;
+                    }
+                }
+                &.link05 {
+                    .title {
+                        color:#64312f;
+                    }
+                    .desc {
+                        color:#a0605d;
+                    }
+                }
+                &.link07 {
+                    .title {
+                        color:#e35d5d;
+                    }
+                    .desc {
+                        color:$basic;
+                    }
+                }
+                &.link08 {
+                    .title {
+                        color:#17216a;
+                    }
+                    .desc {
+                        color:#f8eaf7;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div id="popup">
+        <!-- popup header -->
+        @@include('./layout/popup-header.html', {
+            title : '가입예시/가입안내'
+        })
+        <!-- // popup header -->
+
+        <!-- popup container -->
+        <div class="popup-container">
+            <div class="sections">
+                <div class="tit-wrap">
+                    <h2 class="tit">가입예시/가입안내</h2>
+                    <p class="desc">주의사항 및 계약별 보험료 예시, 해지 환급금 등의 내용을 확인할 수 있습니다.</p>
+                </div>
+                <p class="mobile-info">
+                    모바일에서 내용이 작게 보일 수 있으니<br>상담문의 시 상세하게 안내해 드리겠습니다.
+                </p>
+            </div>
+            <div class="sections">
+                <div class="insu-intro-cont">
+                    <img src="/mobile/images/@content.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- // popup container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+
+        <button type="button" class="popup-close" onclick="window.close();"><span class="blind">팝업 닫기</span></button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* footer */
+footer {
+    padding-top:11px;
+    background:$blur;
+    .foot-top {
+        background:#fff;
+        padding:18px 12px 25px;
+        text-align:center;
+        .call-to {
+            display:inline-block;
+            vertical-align:top;
+            @include font14;
+            em {
+                color:$point;
+                font-weight:700;
+            }
+        }
+        .time {
+            font-size:12px;
+            line-height:21px;
+            color:$gray;
+        }
+        .btns {
+            margin-top:15px;
+            text-align:center;
+            font-size:0;
+            .btn {
+                width:calc((100% - 10px) / 2);
+                margin-left:10px;
+                &:first-child {
+                    margin-left:0;
+                }
+            }
+        }
+    }
+    .foot-bottom {
+        background:#272c34;
+        padding:20px 12px 25px;
+        .dropdown {
+            float:right;
+            width:110px;
+        }
+        .foot-link {
+            clear:both;
+            padding-top:15px;
+            margin-bottom:15px;
+            font-size:0;
+            text-align:center;
+            li {
+                position:relative;
+                display:inline-block;
+                vertical-align:top;
+                &::before {
+                    content:'\b7';
+                    display:inline-block;
+                    vertical-align:top;
+                    padding:0 4px;
+                    color:#ccc;
+                    @include font11;
+                }
+                &:first-child::before {
+                    display:none;
+                }
+                a {
+                    display:inline-block;
+                    vertical-align:top;
+                    color:#ccc;
+                    @include font11;
+                }
+            }
+        }
+        .comp-info {
+            text-align:center;
+            color:#fff;
+            @include font11;
+        }
+        .copyright {
+            margin-top:10px;
+            text-align:center;
+            color:#fff;
+            @include font11;
+        }
+    }
+}

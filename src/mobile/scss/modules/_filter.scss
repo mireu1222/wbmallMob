@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* filter */
+.search-inputs {
+    margin-top:15px;
+    font-size:0;
+    .input-wrap {
+        width:calc(100% - 50px);
+        input {
+            height:36px;
+            border-radius:0;
+            padding:5px 10px;
+        }
+    }
+    .btn-search {
+        display:inline-block;
+        vertical-align:top;
+        width:50px;
+    }
+}

@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+/* button */
+.btn {
+    display:inline-block;
+    vertical-align:top;
+    height:40px;
+    border:1px solid transparent;
+    border-radius:2px;
+    padding:0 10px;
+    cursor:pointer;
+    text-align:center;
+    font-size:13px;
+    line-height:38px;
+    &:disabled {
+        background:$border !important;
+        border-color:$border !important;
+        color:$cont !important;
+        cursor:default;
+    }
+    &.block {
+        display:block;
+        width:100%;
+        margin-top:15px;
+    }
+    &.small {
+        padding:0 15px;
+        height:26px;
+        line-height:23px;
+        &.round {
+            border-radius:13px;
+        }
+    }
+    // color
+    &.gray {
+        background:$gray;
+        border-color:$gray;
+        color:#fff;
+        span.arrow {
+            &::before,
+            &::after {
+                border-color:#fff;
+            }
+        }
+        span.plus {
+            &::before,
+            &::after {
+                background:#fff;
+            }
+        }
+    }
+    &.basic {
+        background:$basic;
+        border-color:$basic;
+        color:#fff;
+        span.arrow {
+            &::before,
+            &::after {
+                border-color:#fff;
+            }
+        }
+        span.plus {
+            &::before,
+            &::after {
+                background:#fff;
+            }
+        }
+    }
+    &.point {
+        background:$point;
+        border-color:$point;
+        color:#fff;
+        span.arrow {
+            padding-right:30px;
+            &::after {
+                width:8px;
+                height:8px;
+                border-color:#fff;
+            }
+        }
+        span.plus {
+            &::before,
+            &::after {
+                background:#fff;
+            }
+        }
+    }
+    &.point2 {
+        background:$point2;
+        border-color:$point2;
+        color:#fff;
+    }
+    // shape
+    &.border {
+        border:1px solid $point;
+        background:#fff;
+        color:$point;
+    }
+    &.border2 {
+        border:1px solid $border;
+        background:$border2;
+        color:$cont;
+        span.arrow {
+            padding-right:25px;
+            &::before,
+            &::after {
+                border-color:$gray;
+            }
+        }
+    }
+    &.border3 {
+        border:1px solid $basic;
+        background:#fff;
+        color:$basic;
+    }
+    &.border4 {
+        border:1px solid $cont;
+        background:#fff;
+        color:$cont;
+    }
+    // font weight 
+    &.md {
+        font-weight:500;
+    }
+    // icon
+    span.arrow {
+        position:relative;
+        display:inline-block;
+        vertical-align:top;
+        padding-right:20px;
+        white-space:nowrap;
+        &::after {
+            content:' ';
+            position:absolute;
+            top:50%;
+            right:3px;
+            width:6px;
+            height:6px;
+            margin-top:-3px;
+            border:1px solid transparent;
+            border-left:none;
+            border-bottom:none;
+            transform:rotate(45deg);
+        }
+    }
+    span.plus {
+        position:relative;
+        display:inline-block;
+        vertical-align:top;
+        padding-right:16px;
+        &::before {
+            content:' ';
+            position:absolute;
+            top:50%;
+            right:4px;
+            width:2px;
+            height:10px;
+            margin-top:-5px;
+        }
+        &::after {
+            content:' ';
+            position:absolute;
+            top:50%;
+            right:0;
+            width:10px;
+            height:2px;
+            margin-top:-1px;
+        }
+    }
+}
+.btn-moreview {
+    display:block;
+    width:100%;
+    margin-top:15px;
+}
+
+.btn-wrap {
+    margin-top:65px;
+    text-align:center;
+    font-size:0;
+    .btn {
+        min-width:180px;
+    }
+}
+
+.buttons {
+    font-size:0;
+    .btn {
+        width:calc((100% - 10px) / 3);
+        margin-left:5px;
+        padding:0;
+        &:first-child {
+            margin-left:0;
+        }
+    }
+    &.size2 {
+        .btn {
+            width:calc((100% - 10px) / 2);
+            margin-left:10px;
+            &:first-child {
+                margin-left:0;
+            }
+        }
+    }
+    &.block {
+        .btn {
+            width:100%;
+            margin-top:10px;
+            margin-left:0;
+            &:first-child {
+                margin-top:0;
+            }
+        }
+    }
+}
+
+.top-btns {
+    margin-bottom:30px;
+    text-align:right;
+}
+.bottom-btns {
+    margin-top:30px;
+    text-align:right;
+}
+
+/* icon button */
+.btn-download {
+    display:inline-block;
+    vertical-align:top;
+    width:34px;
+    height:34px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    background:#fff url('/mobile/images/icon/icon-download.gif') center no-repeat;
+}
+.btn-view {
+    display:inline-block;
+    vertical-align:top;
+    width:34px;
+    height:34px;
+    background:#fff url('/mobile/images/icon/icon-view.png') center no-repeat;
+}

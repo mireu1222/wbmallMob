@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+// breakpoint
+@mixin pc {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+@mixin bpc {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin spc {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media screen and (max-width: 1023px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin mob {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+// font size
+@mixin font11 {
+    font-size:11px;
+    line-height:16px;
+}
+@mixin font12 {
+    font-size:12px;
+    line-height:18px;
+}
+@mixin font13 { //
+    font-size: 13px;
+    line-height: 18px;
+}
+@mixin font14 { //
+    font-size: 14px;
+    line-height: 22px;
+}
+@mixin font15 { //
+    font-size: 15px;
+    line-height: 23px;
+}
+@mixin font16 { //
+    font-size: 16px;
+    line-height: 24px;
+}
+@mixin font18 { //
+    font-size: 18px;
+    line-height: 26px;
+}
+@mixin font20 { //
+    font-size: 20px;
+    line-height: 30px;
+}
+@mixin font24 { //
+    font-size: 24px;
+    line-height: 32px;
+}
+@mixin font26 { //
+    font-size: 26px;
+    line-height: 34px;
+}
+@mixin font30 {
+    font-size: 30px;
+    line-height: 40px;
+}
+@mixin font32 {
+    font-size: 32px;
+    line-height: 42px;
+}
+@mixin font36 {
+    font-size: 36px;
+    line-height: 46px;
+}
+@mixin font40 {
+    font-size: 40px;
+    line-height: 50px;
+}
+@mixin font48 {
+    font-size: 48px;
+    line-height:1;
+}
+
+// box-shadow
+@mixin boxShadow { 
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+// text ellipsis
+@mixin textEllipsis() {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: keep-all;
+    overflow: hidden;
+}
+@mixin textEllipsisClamp($line-clamp) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $line-clamp;
+    -webkit-box-orient: vertical;
+}
+
+// clearfix
+@mixin clearfix {
+    &::after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
+
+// percent calc
+@mixin calcs($property, $size, $wrap) {
+    #{$property}: (($size * 100%) / $wrap);
+}
+
+// max-width 공통화
+@mixin contArea {
+    max-width: 1400px + 80px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    @include tablet {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @include mobile {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}

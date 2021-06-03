@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+/* 보험 상담 */
+.container.consulting {
+    border-top:1px solid $border;
+    .slt-lists.box-type {
+        ul {
+            position:relative;
+            margin-top:0;
+            border:1px solid $border;
+            border-radius:2px;
+            overflow:hidden;
+            &::before {
+                content:' ';
+                position:absolute;
+                top:0;
+                left:50%;
+                bottom:0;
+                width:1px;
+                background:$border;
+            }
+            &::after {
+                content:' ';
+                position:absolute;
+                left:0;
+                right:0;
+                bottom:40px;
+                height:1px;
+                background:$border;
+            }
+            li {
+                margin-top:0;
+                width:50%;
+                border-top:1px solid $border;
+                &:nth-child(1),
+                &:nth-child(2) {
+                    border-top:none;
+                }
+                &:nth-child(even) {
+                    border-left:1px solid $border;
+                }
+                .chk-wrap,
+                .rdo-wrap {
+                    display:block;
+                    input {
+                        & + label {
+                            display:block;
+                            padding:11px 10px;
+                            padding-left:28px;
+                            &::before {
+                                top:14px;
+                                left:10px;
+                            }
+                            &::after {
+                                top:15px;
+                                left:14px;
+                                // border-color:$point;
+                            }
+                        }
+                    }
+                }
+                .rdo-wrap {
+                    input +label::after {
+                        top:14px;
+                        left:13px;
+                    }
+                }
+                // .rdo-wrap {
+                //     input:checked + label {
+                //         &::after {
+                //             top:13px;
+                //             width:3px;
+                //             height:6px;
+                //             border:1px solid $point;
+                //             border-top:none;
+                //             border-left:none;
+                //             border-radius:0;
+                //             transform:rotate(45deg);
+                //             background:none;
+                //         }
+                //     }
+                // }
+            }
+        }
+        &.size4 {
+            ul li {
+                width:25%;
+                border-top:none;
+            }
+        }
+        &.block {
+            ul {
+                &::before,
+                &::after {
+                    display:none;
+                }
+                li {
+                    width:100%;
+                    border-top:1px solid $border;
+                    border-left:none;
+                    &:first-child {
+                        border-top:none;
+                    }
+                    &.comb {
+                        display:flex;
+                        .chk-wrap {
+                            white-space:nowrap;
+                        }
+                        .input-wrap {
+                            padding:5px 10px 5px 0;
+                            input {
+                                height:24px;
+                                padding:0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .slt-lists.btn-box-type {
+        ul {
+            position:relative;
+            margin-top:0;
+            border-radius:2px;
+            overflow:hidden;
+            li {
+                margin-top:0;
+                width:50%;
+                .rdo-btn-wrap {
+                    display:block;
+                }
+                &:first-child {
+                    .rdo-btn-wrap {
+                        input + label {
+                            border-left:1px solid $border;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-info {
+        margin-top:-15px;
+    }
+
+    .qna-list-wrap {
+        ul.lists {
+            > li {
+                margin-top:15px;
+                border:1px solid $border;
+                border-radius:8px;
+                overflow:hidden;
+                @include boxShadow;
+                &:first-child {
+                    margin-top:0;
+                }
+                .qna-head {
+                    padding:30px 15px 20px;
+                    text-align:center;
+                    .ci {
+                        display:block;
+                    }
+                    .cate {
+                        margin-top:15px;
+                        font-size:17px;
+                        line-height:1.3;
+                        font-weight:500;
+                    }
+                    .name {
+                        display:inline-block;
+                        max-width:100%;
+                        height:34px;
+                        margin-top:15px;
+                        padding:0 15px;
+                        border:2px solid $border;
+                        border-radius:17px;
+                        color:$point;
+                        font-size:12px;
+                        line-height:30px;
+                        font-weight:500;
+                        vertical-align:top;
+                        @include textEllipsis;
+                    }
+                }
+                .qna-body {
+                    border-top:1px solid $border;
+                    padding:15px 15px 30px;
+                    .pp-info {
+                        position:relative;
+                        margin-bottom:10px;
+                        @include clearfix;
+                        .thumb {
+                            float:left;
+                            width:30px;
+                            height:30px;
+                            margin-right:10px;
+                            border-radius:50%;
+                            overflow:hidden;
+                        }
+                        .name {
+                            float:left;
+                            font-size:12px;
+                            line-height:30px;
+                            em {
+                                color:$point;
+                                font-weight:500;
+                            }
+                        }
+                        .date {
+                            float:right;
+                            font-size:11px;
+                            line-height:30px;
+                            color:$gray;
+                        }
+                    }
+                    .qst-box {
+                        border:1px solid $border;
+                        border-radius:0 8px 8px 8px;
+                        @include boxShadow;
+                        overflow:hidden;
+                        .question {
+                            padding:12px 15px;
+                            @include font13;
+                            @include textEllipsis;
+                            &::before {
+                                content:'Q';
+                                margin-right:5px;
+                                color:$point;
+                                font-weight:700;
+                            }
+                        }
+                        .answer {
+                            padding:15px;
+                            background:$bg;
+                            text-align:center;
+                            .by {
+                                @include clearfix;
+                                text-align:left;
+                                .thumb {
+                                    float:left;
+                                    width:30px;
+                                    height:30px;
+                                    margin-right:10px;
+                                    border-radius:50%;
+                                    overflow:hidden;
+                                }
+                                .name {
+                                    float:left;
+                                    font-size:11px;
+                                    line-height:30px;
+                                    em {
+                                        margin-right:4px;
+                                        color:$yellow;
+                                        font-weight:500;
+                                    }
+                                }
+                            }
+                            .title {
+                                position:relative;
+                                margin-top:15px;
+                                margin-left:15px;
+                                padding-left:25px;
+                                @include font13;
+                                text-align:left;
+                                &::before {
+                                    content:' ';
+                                    position:absolute;
+                                    top:6px;
+                                    left:0;
+                                    width:6px;
+                                    height:6px;
+                                    background:url('/mobile/images/icon/icon-answer.png') center no-repeat;
+                                    background-size:100%;
+                                }
+                                &::after {
+                                    content:'A';
+                                    position:absolute;
+                                    top:0;
+                                    left:10px;
+                                    font-size:inherit;
+                                    line-height:inherit;
+                                    color:$yellow;
+                                    font-weight:700;
+                                }
+                            }
+                            .btn {
+                                margin-top:12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn.last {
+        margin-top:30px;
+    }
+}

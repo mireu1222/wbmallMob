@@ -1,0 +1,204 @@
+<div class="tbl-wrap notice-tbl">
+    <table class="table col-tbl">
+        @@if(context.noticeType) {
+        <caption>공지사항 리스트</caption>
+        }
+        @@if(context.reviewType) {
+        <caption>이용후기 리스트</caption>
+        }
+        @@if(context.myType) {
+        <caption>내가 쓴 글 리스트</caption>
+        }
+        @@if(context.myqType) {
+        <caption>1:1문의내역 리스트</caption>
+        }
+        @@if(context.caption) {
+        <caption>@@caption</caption>
+        }
+        <colgroup>
+            @@if (!context.reservationType) {
+                <col class="col1">
+                @@if(context.myType || context.myqType) {
+                <col class="col2">
+                }
+                <col>
+                <col class="col2">
+                @@if(context.myqType) {
+                <col class="col1">
+                }
+                @@if(context.reviewType) {
+                <col class="col2">
+                }
+            }
+            @@if(context.reservationType) {
+                <col class="col2">
+                <col>
+                <col class="col2">
+                <col class="col2">
+                <col class="col2">
+                <col class="col1">
+            }
+        </colgroup>
+        <thead>
+            <tr>
+                @@if(!context.reservationType) {
+                    <th scope="col">번호</th>
+                    @@if(context.myType || context.myqType) {
+                    <th scope="col">구분</th>
+                    }
+                    <th scope="col">제목</th>
+                    <th scope="col">등록일</th>
+                    @@if(context.reviewType) {
+                    <th scope="col">작성자</th>
+                    }
+                    @@if(context.myqType) {
+                    <th scope="col">상태</th>
+                    }
+                }
+                @@if(context.reservationType) {
+                    <th scope="col">예약번호</th>
+                    <th scope="col">예약구분</th>
+                    <th scope="col">예약일</th>
+                    <th scope="col">예약시간</th>
+                    <th scope="col">신청일</th>
+                    <th scope="col">상태</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @@if(!context.myType && !context.myqType && !context.reservationType) {
+            <tr>
+                <td><span class="flag point">공지</span></td>
+                <td class="al-l">
+                    <a href="@@sublink" class="link-to-view">관리자에서 공지로 지정시 공지 상단 고정 노출</a>
+                </td>
+                <td>2021-02-26</td>
+                @@if(context.reviewType) {
+                <td>홍길동</td>
+                }
+            </tr>
+            <tr>
+                <td>20</td>
+                <td class="al-l">
+                    <a href="@@sublink" class="link-to-view">타이틀이 들어갑니다.</a>
+                </td>
+                <td>2021-02-26</td>
+                @@if(context.reviewType) {
+                <td>홍길동</td>
+                }
+            </tr>
+            <tr>
+                <td>19</td>
+                <td class="al-l">
+                    <a href="@@sublink" class="link-to-view new">타이틀이 들어갑니다. '.new' addClass시 NEW flag가 붙어요.</a>
+                </td>
+                <td>2021-02-26</td>
+                @@if(context.reviewType) {
+                <td>홍길동</td>
+                }
+            </tr>
+            }
+            @@if (context.myType) {
+            <tr>
+                <td>20</td>
+                <td>이벤트</td>
+                <td class="al-l">
+                    <a href="@@sublink" class="link-to-view">타이틀이 들어갑니다.</a>
+                </td>
+                <td>2021-02-26</td>
+            </tr>
+            }
+            @@if (context.myqType) {
+            <tr>
+                <td>6</td>
+                <td>이용문의</td>
+                <td class="al-l">
+                    <a href="@@sublink1" class="link-to-view">타이틀이 들어갑니다. 클릭시 처리완료case view page로 이동</a>
+                </td>
+                <td>2021-02-26</td>
+                <td><span class="flag point">완료</span></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>예약문의</td>
+                <td class="al-l">
+                    <a href="@@sublink2" class="link-to-view">타이틀이 들어갑니다. 클릭시 처리중case view page로 이동</a>
+                </td>
+                <td>2021-02-26</td>
+                <td><span class="flag red">처리중</span></td>
+            </tr>
+            }
+            @@if(context.reservationType) {
+            <tr>
+                <td>20210330-001</td>
+                <td>휠체어+타보리+안내요원</td>
+                <td>2021-04-15</td>
+                <td>10:00 ~ 12:00</td>
+                <td>2021-03-30</td>
+                <td><span class="flag point">예약대기</span></td>
+            </tr>
+            <tr>
+                <td>20210330-001</td>
+                <td>휠체어+타보리+안내요원</td>
+                <td>2021-04-15</td>
+                <td>10:00 ~ 12:00</td>
+                <td>2021-03-30</td>
+                <td><span class="flag red">예약완료</span></td>
+            </tr>
+            <tr>
+                <td>20210330-001</td>
+                <td>휠체어+타보리+안내요원</td>
+                <td>2021-04-15</td>
+                <td>10:00 ~ 12:00</td>
+                <td>2021-03-30</td>
+                <td><span class="flag gray">예약취소</span></td>
+            </tr>
+            <tr>
+                <td>20210330-001</td>
+                <td>휠체어+타보리+안내요원</td>
+                <td>2021-04-15</td>
+                <td>10:00 ~ 12:00</td>
+                <td>2021-03-30</td>
+                <td><span class="flag dkgray">이용취소</span></td>
+            </tr>
+            <tr>
+                <td>20210330-001</td>
+                <td>휠체어+타보리+안내요원</td>
+                <td>2021-04-15</td>
+                <td>10:00 ~ 12:00</td>
+                <td>2021-03-30</td>
+                <td><span class="flag mint">이용완료</span></td>
+            </tr>
+            }
+            <!-- nodata -->
+            <tr>
+                @@if(context.noticeType) {
+                <td colspan="3">
+                }
+                @@if(context.reviewType || context.myType) {
+                <td colspan="4">
+                }
+                @@if(context.myqType) {
+                <td colspan="5">
+                }
+                @@if(context.reservationType) {
+                <td colspan="6">
+                }
+                    @@if(!context.reservationType) {
+                    <!-- <p class="nodata">검색결과가 없습니다.</p> -->
+                    <p class="nodata">게시글이 없습니다.</p>
+                    }
+                    @@if(context.reservationType) {
+                    <p class="nodata">예약내역이 없습니다.</p>
+                    }
+                </td>
+            </tr>
+            <!-- // nodata -->
+        </tbody>
+    </table>
+    @@if(context.bottomBtn) {
+    <div class="with-btn">
+        <a href="/mobile/page/sub_05_02_write.html" class="btn gray h36"><span>@@bottomBtn</span></a>
+    </div>
+    }
+</div>

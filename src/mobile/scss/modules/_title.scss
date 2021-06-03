@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* title common */
+.page-title {
+    position:relative;
+    margin-bottom:20px;
+    .title {
+        font-size:18px;
+        line-height:1.2;
+        font-weight:700;
+    }
+    .desc {
+        margin-top:8px;
+        @include font13;
+        color:$gray;
+    }
+}
+.chk-title {
+    display:block;
+    position:relative;
+    @include font18;
+    font-weight:500;
+    padding-left:22px;
+    &::before {
+        content:' ';
+        position:absolute;
+        left:5px;
+        top:5px;
+        width:8px;
+        height:14px;
+        border:2px solid $yellow;
+        border-top:none;
+        border-left:none;
+        transform:rotate(45deg);
+    }
+}
+.bullet-tit {
+    position:relative;
+    padding-left:8px;
+    margin-top:10px;
+    margin-bottom:8px;
+    @include font12;
+    word-break:keep-all;
+    &:first-child {
+        margin-top:0; 
+    }
+    &::before {
+        content:' ';
+        position:absolute;
+        top:8px;
+        left:0;
+        width:4px;
+        height:4px;
+        border-radius:2px;
+        background:$point;
+    }
+    em {
+        font-weight:700;
+        color:$point;
+    }
+}

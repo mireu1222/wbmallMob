@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container promotion">
+            <div class="sections">
+                @@include('./layout/page-title.html', {
+                    title : '보험기획관',
+                })
+                <!-- 화면이동 -->
+                <div class="select-dropdown ui-dropdown">
+                    <a href="#n" class="btn-toggle"><span class="blind">현재 페이지</span>무해지보험기획관<span class="blind">페이지 목록 보기</span></a>
+                    <ul class="lists">
+                        <li><a href="/mobile/page/sub_04_01.html">보장별 기획</a></li>
+                        <li><a href="/mobile/page/sub_04_02.html">보험별 기획</a></li>
+                        <li class="active"><a href="/mobile/page/sub_04_03.html">무해지보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_04.html">치아보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_05.html">유병자보험기획관</a></li>
+                        <li><a href="/mobile/page/sub_04_06.html">운전자보험기획관</a></li>
+                    </ul>
+                </div>
+                <!-- // 화면이동 -->
+                <div class="insu-contents">
+                    <div class="insu-intro-cont">
+                        <img src="/mobile/images/img-cont-0401-01.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="pr-type2-contents">
+                <div class="pr-bodys">
+                    @@loop('./modules/insu-promotion.html', [
+                        {
+                            cate : '무해지환급형 암/건강보험',
+                            desc : '보험료 부담은 줄이고, 보장은 동일하게'
+                        }, {
+                            cate : '무해지환급형 암/건강보험',
+                            desc : '보험료 부담은 줄이고, 보장은 동일하게'
+                        }, {
+                            cate : '무해지환급형 암/건강보험',
+                            desc : '보험료 부담은 줄이고, 보장은 동일하게'
+                        }, 
+                    ])
+                </div>
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

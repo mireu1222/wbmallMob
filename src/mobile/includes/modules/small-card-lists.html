@@ -1,0 +1,25 @@
+<!-- loop -->
+<li>
+    <div class="inner">
+        @@if(context.flag) {
+        <span class="flags">BEST</span>
+        }
+        <a href="/mobile/page/sub_01_view.html" class="ci"><img src="/mobile/images/ci/@@img" alt="@@alt"></a>
+        @@if(!context.cant) {
+        <div class="price-wrap">
+            <span class="mon">월</span>
+            <span class="price"><em>**,***</em>원</span>
+        </div>
+        }
+        @@if(context.cant) {
+        <div class="calc-impossible">
+            <p class="cant">산출불가</p>
+            <div class="tooltip-wrap">
+                <span class="tooltip-target">도움말</span>
+            </div>
+        </div>
+        }
+        <a href="javascript:popupOpen('/mobile/page/popup_sub02_view01.html', '월 보험료 결과보기');" class="btn border3 md"><span>월 보험료 결과보기</span></a>
+    </div>
+</li>
+<!-- // loop -->

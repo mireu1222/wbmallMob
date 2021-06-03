@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div id="popup">
+        <!-- popup header -->
+        @@include('./layout/popup-header.html', {
+            title : '실시간 게시판 문의'
+        })
+        <!-- // popup header -->
+
+        <!-- popup container -->
+        <div class="popup-container">
+            <div class="sections">
+                <div class="tit-wrap">
+                    <h2 class="tit">실시간 게시판 문의</h2> 
+                </div>
+                <div class="form-wrap narrow-type">
+                    <div class="row no-border">
+                        <div class="forms">
+                            <span class="selectbox-wrap">
+                                <select id="slt01" class="nice-select">
+                                    <option value="" data-placeholder="true">보험종류를 선택하세요(필수사항)</option>
+                                    <option value="">암보험</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="forms">
+                            <span class="selectbox-wrap">
+                                <select id="slt02" class="nice-select">
+                                    <option value="" data-placeholder="true">보험상품을 선택하세요</option>
+                                    <option value="">암보험</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-title" placeholder="제목을 입력해주세요.">
+                            </span>
+                        </div>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <textarea placeholder="문의하실 내용을 입력해주세요."></textarea>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-wrap">
+                    <div class="form-title">
+                        <h3 class="tit">고객정보</h3>
+                        <p class="desc">전문상담원이 입력해 주신 정보로 연락드리고,<br>상담을 진행합니다.</p>
+                    </div>
+                    <div class="row type2">
+                        <div class="col">
+                            <label for="ipt-name">성함</label>
+                            <div class="forms">
+                                <span class="input-wrap">
+                                    <input type="text" id="ipt-name" placeholder="이름">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="slt-gender">성별</label>
+                            <div class="forms">
+                                <span class="selectbox-wrap">
+                                    <select id="slt-gender" class="nice-select">
+                                        <option value="" data-placeholder="true">성별을 선택하세요</option>
+                                        <option value="">남성</option>
+                                        <option value="">여성</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-phone">휴대폰번호</label>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-phone" placeholder="'-'제외 숫자입력">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-birth">생년월일</label>
+                        <div class="forms birth-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-birth" placeholder="(예시 : 19720717)" maxlength="8">
+                            </span>
+                            <div class="year">보험나이 <em>99</em>세</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-email">이메일</label>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-email" placeholder="(예시 : abc@naver.com)">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="check-wrap">
+                            <span class="chk-wrap">
+                                <input type="checkbox" id="agree" name="agree">
+                                <label for="agree">개인정보수집 및 활용동의</label>
+                            </span>
+                            <a href="#n" class="btn point round small"><span>보기</span></a>
+                        </div>
+                        <p class="form-msg text-center">※ 고객정보는 당사 외 <em>제3자에게 절대 제공하지 않습니다.</em></p>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn point md"><span>게시판 문의하기</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // popup container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+
+        <button type="button" class="popup-close" onclick="window.close();"><span class="blind">팝업 닫기</span></button>
+    </div>
+</body>
+</html>

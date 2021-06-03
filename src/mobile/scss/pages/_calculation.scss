@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/* 통합보험료계산 */
+.container.calculation {
+    .calc-result {
+        margin:30px -12px;
+        padding:25px;
+        background:$basic;
+        text-align:center;
+        p {
+            color:#fff;
+            font-size:13px;
+            line-height:26px;
+        }
+        em {
+            display:inline-block;
+            vertical-align:bottom;
+            font-size:18px;
+            font-weight:500;
+            color:$yellow;
+        }
+    }
+}

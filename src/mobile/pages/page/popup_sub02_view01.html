@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div id="popup">
+        <!-- popup header -->
+        @@include('./layout/popup-header.html', {
+            title : '보험료 계산 결과'
+        })
+        <!-- // popup header -->
+
+        <!-- popup container -->
+        <div class="popup-container">
+            <div class="sections">
+                <div class="tit-wrap">
+                    <h2 class="tit">보험료 계산 결과</h2>
+                    <p class="desc">실시간 내 월 보험료는?</p>
+                </div>
+                <div class="insu-intro-box">
+                    <span class="ci"><img src="/mobile/images/ci/ci01.png" alt="MG손해보험"></span>
+                    <p class="name">(무)건강명의4대질병진단보험(20.04)(암중점형)</p>
+                    <p class="price">
+                        <span>월 보험료</span>
+                        <em>39,389</em>
+                        <span class="small">원</span>
+                    </p>
+                    <p class="desc">※상품개정으로 인하여 보장내용 및 보험료가 달라질 수 있습니다.</p>
+                    <ul class="infos">
+                        <li>보험나이 <em>28세</em></li>
+                        <li>납입기간 <em>20년납</em></li>
+                        <li>보험기간 <em>100세 만기</em></li>
+                    </ul>
+                </div>
+                <div class="insu-intro-cont">
+                    <img src="/mobile/images/@content.gif" alt="">
+                </div>
+                <div class="buttons block">
+                    <a href="" class="btn block point md"><span>무료 상담 신청하기</span></a>
+                    <a href="" class="btn block border4 md"><span>보험료 다시 계산하기</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- // popup container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+
+        <button type="button" class="popup-close" onclick="window.close();"><span class="blind">팝업 닫기</span></button>
+    </div>
+</body>
+</html>

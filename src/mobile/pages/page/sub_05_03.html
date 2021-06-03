@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html')
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container consulting">
+            <div class="sections">
+                @@include('./layout/page-title.html', {
+                    title : '보험상담',
+                })
+                <!-- 화면이동 -->
+                <div class="select-dropdown ui-dropdown">
+                    <a href="#n" class="btn-toggle"><span class="blind">현재 페이지</span>실시간 보험문의<span class="blind">페이지 목록 보기</span></a>
+                    <ul class="lists">
+                        <li><a href="/mobile/page/sub_05_01.html">온라인 상담신청</a></li>
+                        <li><a href="/mobile/page/sub_05_02.html">온라인 가입신청</a></li>
+                        <li class="active"><a href="/mobile/page/sub_05_03.html">실시간 보험문의</a></li>
+                    </ul>
+                </div>
+                <p class="mobile-info">
+                    보험상품에 대한 문의게시판으로 본 게시판 성격과 맞지 않는 글은 임의로 삭제될 수 있습니다.
+                </p>
+                <a href="#n" class="btn point block md"><span>실시간 보험문의하기</span></a>
+            </div>
+            <div class="sections">
+                <div class="qna-list-wrap">
+                    <ul class="lists">
+                        <li>
+                            <div class="qna-head">
+                                <span class="ci"><img src="/mobile/images/ci/ci01.png" alt="MG손해보험"></span>
+                                <p class="cate">의료실비보험</p>
+                                <p class="name">보험상품 미선택</p>
+                            </div>
+                            <div class="qna-body">
+                                <div class="pp-info">
+                                    <span class="thumb" aria-hidden="true"><img src="/mobile/images/@pp.jpg" alt=""></span>
+                                    <p class="name"><span class="blind">작성자</span><em>박대영</em>님(53세)</p>
+                                    <p class="date"><span class="blind">등록일</span>2020.09.09</p>
+                                </div>
+                                <div class="qst-box">
+                                    <div class="question"><span class="blind">질문 제목</span>실손의료보험 가입문의드립니다.</div>
+                                    <div class="answer">
+                                        <div class="by">
+                                            <span class="thumb" aria-hidden="true"><img src="/mobile/images/@cnst.jpg" alt=""></span>
+                                            <p class="name"><span class="blind">답변 작성자</span><em>정예진</em>컨설턴트</p>
+                                        </div>
+                                        <p class="title"><span class="blind">답변 제목</span>일반 의료실비와 유병자용 의료실비 안내해드립니다.</p>
+                                        <a href="javascript:popupOpen('/mobile/page/popup_sub05_03_view01.html', '답변 자세히보기');" class="btn basic round small"><span>자세히 보기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="qna-head">
+                                <span class="ci"><img src="/mobile/images/ci/ci01.png" alt="MG손해보험"></span>
+                                <p class="cate">의료실비보험</p>
+                                <p class="name">보험상품 미선택</p>
+                            </div>
+                            <div class="qna-body">
+                                <div class="pp-info">
+                                    <span class="thumb" aria-hidden="true"><img src="/mobile/images/@pp.jpg" alt=""></span>
+                                    <p class="name"><span class="blind">작성자</span><em>박대영</em>님(53세)</p>
+                                    <p class="date"><span class="blind">등록일</span>2020.09.09</p>
+                                </div>
+                                <div class="qst-box">
+                                    <div class="question"><span class="blind">질문 제목</span>실손의료보험 가입문의드립니다.</div>
+                                    <div class="answer">
+                                        <div class="by">
+                                            <span class="thumb" aria-hidden="true"><img src="/mobile/images/@cnst.jpg" alt=""></span>
+                                            <p class="name"><span class="blind">답변 작성자</span><em>정예진</em>컨설턴트</p>
+                                        </div>
+                                        <p class="title"><span class="blind">답변 제목</span>답변 등록중입니다.</p>
+                                        <a href="javascript:popupOpen('/mobile/page/popup_sub05_03_view01.html', '답변 자세히보기');" class="btn basic round small"><span>자세히 보기</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 검색 -->
+                <div class="search-inputs">
+                    <span class="input-wrap">
+                        <input type="text" placeholder="제목+내용을 입력하세요">
+                    </span>
+                    <button type="button" class="btn-search btn point"><span>검색</span></button>
+                </div>
+                <!-- // 검색 -->
+                <!-- pagination -->
+                @@include('./modules/pagination.html')
+                <!-- // pagination -->
+                <a href="javascript:popupOpen('/mobile/page/popup_sub05_03_write01.html', '문의하기');" class="btn block point md last"><span>게시판 문의하기</span></a>
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+</body>
+</html>

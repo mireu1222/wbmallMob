@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* dropdown */
+.dropdown {
+    position:relative;
+    display:inline-block;
+    width:210px;
+    .btn-toggle {
+        display:block;
+        position:relative;
+        width:100%;
+        height:40px;
+        padding:0 20px 0 8px;
+        border:1px solid $border;
+        border-radius:2px;
+        background:#fff;
+        color:$gray;
+        font-size:13px;
+        line-height:38px;
+        text-align:left;
+        @include textEllipsis;
+        &::after {
+            content:' ';
+            position:absolute;
+            right:7px;
+            top:50%;
+            width:7px;
+            height:4px;
+            margin-top:-2px;
+            background:url('/mobile/images/icon/icon-arrow.png') center no-repeat;
+            background-size:100%;
+            transition:all 0.2s ease-out;
+        }
+    }
+    .lists {
+        display:none;
+        position:absolute;
+        top:calc(100% - 1px);
+        left:0;
+        right:0;
+        background:#fff;
+        border:1px solid $border;
+        z-index:10;
+        li {
+            border-top:1px solid $border;
+            &:first-child {
+                border-top:none;
+            }
+            a {
+                display:block;
+                padding:0 8px;
+                color:$gray;
+                font-size:14px;
+                line-height:38px;
+            }
+        }
+    }
+    &.dropup {
+        .lists {
+            top:auto;
+            bottom:calc(100% - 1px);
+            border-radius:2px 2px 0 0;
+        }
+    }
+    &.open {
+        .btn-toggle::after {
+            transform:rotate(180deg);
+        }
+        .lists {
+            display:block;
+        }
+    }
+}
+
+.select-dropdown {
+    position:relative;
+    display:block;
+    .btn-toggle {
+        display:block;
+        position:relative;
+        width:100%;
+        height:40px;
+        padding:8px 10px;
+        padding-right:28px;
+        border:1px solid $border;
+        border-radius:2px;
+        background:#fff;
+        color:$basic;
+        font-size:13px;
+        line-height:22px;
+        text-align:left;
+        @include textEllipsis;
+        &::after {
+            content:' ';
+            position:absolute;
+            right:7px;
+            top:50%;
+            width:7px;
+            height:4px;
+            margin-top:-2px;
+            background:url('/mobile/images/icon/icon-arrow.png') center no-repeat;
+            background-size:100%;
+            transition:all 0.2s ease-out;
+        }
+    }
+    .lists {
+        display:none;
+        position:absolute;
+        top:calc(100% - 1px);
+        left:0;
+        right:0;
+        background:#fff;
+        border:1px solid $border;
+        border-radius:0 0 2px 2px;
+        z-index:10;
+        li {
+            a {
+                display:block;
+                padding:0 10px;
+                color:$basic;
+                font-size:13px;
+                line-height:38px;
+            }
+            &.active {
+                a {
+                    background:$bg;
+                    color:$point;
+                    font-weight:700;
+                }
+            }
+        }
+    }
+    &.dropup {
+        .lists {
+            top:auto;
+            bottom:calc(100% - 1px);
+            border-radius:2px 2px 0 0;
+        }
+    }
+    &.open {
+        .btn-toggle {
+            border-color:$point;
+            border-radius:2px 2px 0 0;
+        }
+        .btn-toggle::after {
+            transform:rotate(180deg);
+        }
+        .lists {
+            display:block;
+            border-color:$point;
+        }
+    }
+}

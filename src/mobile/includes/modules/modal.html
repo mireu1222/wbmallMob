@@ -1,0 +1,680 @@
+@@if(context.id === 'modal01') {
+    <!-- 무료상담신청 -->
+    <article id="@@id" class="modal-wrap medium" style="display:none;">
+        <div class="modal-contents">
+            <div class="tit-wrap">
+                <h1 class="tit">무료상담신청</h1>
+                <p class="desc">고객님의 궁금증을 신속하게 친절하게 안내해 드리겠습니다.</p>
+            </div>
+            <div class="insu-intro-box">
+                <span class="ci"><img src="/mobile/images/ci/ci01.png" alt="MG손해보험"></span>
+                <p class="name">(무)건강명의4대질병진단보험(20.04)(암중점형)</p>
+            </div>
+            <div class="form-wrap">
+                <div class="form-title">
+                    <h2 class="tit">고객정보</h2>
+                    <p class="desc">전문상담원이 입력해 주신 정보로 연락드리고, 상담을 진행합니다.</p>
+                </div>
+                <div class="row type2">
+                    <div class="col">
+                        <label for="ipt-name">성함</label>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-name" placeholder="이름">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="slt-gender">성별</label>
+                        <div class="forms">
+                            <span class="selectbox-wrap">
+                                <select id="slt-gender" class="nice-select">
+                                    <option value="" data-placeholder="true">성별을 선택하세요</option>
+                                    <option value="">남성</option>
+                                    <option value="">여성</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-birth">생년월일</label>
+                    <div class="forms birth-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-birth" placeholder="(예시 : 19720717)">
+                        </span>
+                        <div class="year">보험나이 <em>99</em>세</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-phone">휴대폰번호</label>
+                    <div class="forms phone-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-phone" placeholder="'-'제외 숫자입력">
+                        </span>
+                        <button type="button" class="btn point"><span>인증번호</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-phone-num">인증번호</label>
+                    <div class="forms phone-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-phone-num">
+                        </span>
+                        <span class="time">03:00</span>
+                        <button type="button" class="btn point" disabled><span>인증완료</span></button>
+                        <!-- <button type="button" class="btn point"><span>인증완료</span></button> 인증번호 입력 후 disabled 삭제 -->
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-cont">상담내용</label>
+                    <div class="forms">
+                        <span class="input-wrap">
+                            <textarea></textarea>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <div class="check-wrap">
+                        <span class="chk-wrap">
+                            <input type="checkbox" id="agree" name="agree">
+                            <label for="agree">개인정보수집 및 활용동의</label>
+                        </span>
+                        <a href="#n" class="text-link"><span>보기</span></a>
+                    </div>
+                    <p class="form-msg text-center">※ 고객정보는 당사 외 <em>제3자에게 절대 제공하지 않습니다.</em></p>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn point md"><span>상담신청</span></button>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- // 무료상담신청 -->
+}
+@@if(context.id === 'modal02') {
+    <!-- 실시간 보험료계산 -->
+    <article id="@@id" class="modal-wrap medium" style="display:none;">
+        <div class="modal-contents">
+            <div class="tit-wrap">
+                <h1 class="tit">실시간 보험료계산</h1>
+                <p class="desc">선택하신 상품의 월 보험료를 쉽게 계산해보세요!</p>
+            </div>
+            <div class="insu-intro-box">
+                <span class="ci"><img src="/mobile/images/ci/ci01.png" alt="MG손해보험"></span>
+                <p class="name">(무)건강명의4대질병진단보험(20.04)(암중점형)</p>
+                <p class="desc">※ 상품개정으로 인하여 보장내용 및 보험료가 달라질 수 있습니다.</p>
+                <div class="btn-box">
+                    <a href="#n" class="btn basic round h24 sm"><span>바로가기</span></a>
+                </div>
+            </div>
+            <div class="form-wrap">
+                <div class="form-title">
+                    <h2 class="tit">고객정보</h2>
+                </div>
+                <div class="row type2">
+                    <div class="col">
+                        <label for="ipt-name1">성함</label>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-name1" placeholder="이름">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="slt-gender">성별</label>
+                        <div class="forms">
+                            <span class="selectbox-wrap">
+                                <select id="slt-gender" class="nice-select">
+                                    <option value="" data-placeholder="true">성별을 선택하세요</option>
+                                    <option value="">남성</option>
+                                    <option value="">여성</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-birth1">생년월일</label>
+                    <div class="forms birth-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-birth1" placeholder="(예시 : 19720717)">
+                        </span>
+                        <div class="year">보험나이 <em>99</em>세</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-phone1">휴대폰번호</label>
+                    <div class="forms phone-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-phone1" placeholder="'-'제외 숫자입력">
+                        </span>
+                        <button type="button" class="btn point"><span>인증번호</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-phone-num1">인증번호</label>
+                    <div class="forms phone-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-phone-num1">
+                        </span>
+                        <span class="time">03:00</span>
+                        <button type="button" class="btn point" disabled><span>인증완료</span></button>
+                        <!-- <button type="button" class="btn point"><span>인증완료</span></button> 인증번호 입력 후 disabled 삭제 -->
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <div class="check-wrap">
+                        <span class="chk-wrap">
+                            <input type="checkbox" id="agree" name="agree">
+                            <label for="agree">개인정보수집 및 활용동의</label>
+                        </span>
+                        <a href="#n" class="text-link"><span>보기</span></a>
+                    </div>
+                    <p class="form-msg text-center">※ 고객정보는 당사 외 <em>제3자에게 절대 제공하지 않습니다.</em></p>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn point md"><span>보험료 계산하기</span></button>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- // 실시간 보험료계산 -->
+}
+@@if(context.id === 'modal03') {
+    <!-- SMS인증 -->
+    <article id="@@id" class="modal-wrap small" style="display:none;">
+        <div class="modal-contents">
+            <div class="tit-wrap">
+                <h1 class="tit">SMS 인증</h1>
+                <p class="desc">고객님의 휴대폰으로 인증번호를 전송중입니다.<br>잠시만 기다려주시기 바랍니다.</p>
+            </div>
+            <div class="form-wrap">
+                <div class="row">
+                    <label for="ipt-nums">인증번호</label>
+                    <div class="forms phone-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-nums">
+                        </span>
+                        <span class="time">03:00</span>
+                        <button type="button" class="btn point"><span>확인</span></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-nums-again">재인증요청</label>
+                    <div class="forms phone-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-nums-again">
+                        </span>
+                        <button type="button" class="btn point" disabled><span>재발송</span></button>
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <dl class="bullet-dl">
+                        <dt>SMS수신이 안되시나요?</dt>
+                        <dd>착신 관련 서비스에 가입되어 있는 경우 SMS 착신이 되지 않습니다. 스팸 설정이 되어있는 경우가 아닌지 확인해주세요.<br>(02-6288 국번으로 수신됩니다)</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- // SMS인증 -->
+}
+@@if(context.id === 'modal-loading') {
+    <!-- loading -->
+    <article id="@@id" class="modal-wrap loading" style="display:none;">
+        <div class="modal-contents">
+            <!-- loading -->
+            <div class="loadings">
+                <div class="area">
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                    <span>&nbsp;</span>
+                </div>
+            </div>
+            <!-- // loading -->
+            <p class="txt big">고객님의 정보를 통해 <em>실시간 계산</em> 중입니다.</p>
+            <p class="txt">고객님께 딱 맞는 <em>보장</em>에 대해<br><em>맞춤</em> 안내해 드리고 있습니다.</p>
+            <p class="txt">연락처를 정확하게 입력해 주세요.</p>
+        </div>
+    </article>
+    <!-- // loading -->
+}
+@@if(context.id === 'modal05') {
+    <!-- 보험료계산 -->
+    <article id="@@id" class="modal-wrap large" style="display:none;">
+        <div class="modal-contents">
+            <div class="insu-recomm-result">
+                <div class="insu-title">
+                    <span class="ci"><img src="/mobile/images/ci/ci01.png" alt="MG손해보험"></span>
+                    <div class="name">
+                        <h1>(무)건강명의4대질병진단보험(20.04)(암중점형)</h1>
+                        <a href="#n" class="btn border2 h24 sm"><span class="arrow">바로가기</span></a>
+                    </div>
+                    <p class="desc">※ 상품개정으로 인하여 보장내용 및 보험료가 달라질 수 있습니다.</p>
+                </div>
+                <div class="insu-contents">
+                    <!-- info -->
+                    <div class="left">
+                        <div class="p-info">
+                            <p class="tit">고객정보</p>
+                            <ul>
+                                <li>
+                                    <dl>
+                                        <dt>이름</dt>
+                                        <dd>김철수</dd>
+                                    </dl>
+                                </li>
+                                <li>
+                                    <dl>
+                                        <dt>보험나이</dt>
+                                        <dd><em>39세</em></dd>
+                                    </dl>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="insu-info">
+                            <p class="cate">암중점형</p>
+                            <p class="result">(무)건강명의4대질병진단보험(20.04)(암중점형)</p>
+                        </div>
+                    </div>
+                    <!-- // info -->
+                    <!-- cont -->
+                    <div class="right">
+                        <!-- 보험설계조건 -->
+                        <div class="requirement">
+                            <div class="req-left border-box">
+                                <p class="tit">월 납입보험료<small>*최고가입연령 기준보험료 계산결과</small></p>
+                                <dl>
+                                    <dt>암중점형</dt>
+                                    <dd><span>월<em>35,500</em></span> 원</dd>
+                                </dl>
+                            </div>
+                            <div id="requirement-change" class="req-right border-box bg-type">
+                                <div class="default">
+                                    <div class="wrap">
+                                        <p>보험료 설계조건 변경</p>
+                                        <a href="#n" class="btn point big"><span>설계조건 변경하기</span></a>
+                                    </div>
+                                </div>
+                                <div class="result" style="display:none;">
+                                    <p class="tit">보험료 설계조건 변경</p>
+                                    <ul class="req-list">
+                                        <li>
+                                            <dl>
+                                                <dt><label for="req-slt01">납입기간</label></dt>
+                                                <dd>
+                                                    <span class="selectbox-wrap">
+                                                        <select id="req-slt01" class="nice-select small">
+                                                            <option value="">20년 납</option>
+                                                        </select>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><label for="req-slt02">보험기간</label></dt>
+                                                <dd>
+                                                    <span class="selectbox-wrap">
+                                                        <select id="req-slt02" class="nice-select small">
+                                                            <option value="">100세만기(일부특약 상이)</option>
+                                                        </select>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn point round h24 sm refresh"><span>변경완료</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 보험설계조건 -->
+                        <!-- 안내 -->
+                        <div class="information">
+                            <p class="tit">보험료계산 결과에 대해 전문상담원이 보장별로 자세히 안내를 드리겠습니다. <em>일반 번호로 연락드리니 꼭! 받아주세요.</em></p>
+                            <div class="border-box bg-type">
+                                @@include('./modules/bullet-list.html', {
+                                    text : [
+                                        '고객님의 생년월일 <em>[19901205]</em>은 선택하신 상품의 <em>[가입가능연령 및 납입기간]</em>과 맞지 않아 월 보험료 산출이 되지 않았습니다',
+                                        '선택하신 상품의 가입가능 연령 중 가장 높은 연령인 <em>[60세]</em>의 월 보험료의 결과입니다.',
+                                        '고객님의 정확한 월 보험료는 전문 상담원을 통해 안내해 드리겠습니다.'
+                                    ]
+                                })
+                            </div>
+                        </div>
+                        <!-- // 안내 -->
+                        <!-- 가입기준 -->
+                        <div class="criteria">
+                            <div class="tbl-wrap">
+                                <h2 class="tbl-tit chk-title">가입기준</h2>
+                                <table class="table col-tbl">
+                                    <caption>보험 기본 가입기준 안내</caption>
+                                    <colgroup>
+                                        <col style="width:120px">
+                                        <col style="width:170px">
+                                        <col style="width:120px">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">보험나이</th>
+                                            <th scope="col">보험기간</th>
+                                            <th scope="col">납입기간</th>
+                                            <th scope="col">가입유형</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>60세</td>
+                                            <td>100세만기(일부특약상이)</td>
+                                            <td>20년납</td>
+                                            <td>가입가능 최소보험료</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table col-tbl">
+                                    <caption>보험 가입기준 상세항목 안내</caption>
+                                    <colgroup>
+                                        <col class="col1">
+                                        <col>
+                                        <col>
+                                        <col>
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">구분</th>
+                                            <th scope="col">담보명</th>
+                                            <th scope="col">보험기간</th>
+                                            <th scope="col">납입기간</th>
+                                            <th scope="col">가입금액</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>기본계약</td>
+                                            <td>암진단비(유사암제외)</td>
+                                            <td>100세 만기</td>
+                                            <td>20년납</td>
+                                            <td>3,000만원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>필수특약</td>
+                                            <td>유사암진단비</td>
+                                            <td>100세 만기</td>
+                                            <td>20년납</td>
+                                            <td>1,000만원</td>
+                                        </tr>
+                                        <tr>
+                                            <td>선택특약</td>
+                                            <td>일반상해사망보험금(20년만기)</td>
+                                            <td>20년 만기</td>
+                                            <td>20년납</td>
+                                            <td>1억 5,000만원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                @@include('./modules/bullet-list.html', {
+                                    'type' : 'red',
+                                    text : [
+                                        '상기 내용은 고객님의 이해를 돕기 위해 일정 조건에 맞춰 작성된 것으로, 세부적인 보장내용 및 가입가능 여부는 전문 상담원의 안내를 받으시기 바랍니다.',
+                                        '보장받으시는 분의 직종, 직무,연령 기타사항으로 인해 가입금액이 제한되거나 인수가 불가능할 수도있고, 성별 나이, 직업 직종, 가입금액, 납입기간, 운전여부 등에 따라 보험료는 달라질 수 있습니다.'
+                                    ]
+                                })
+                            </div>
+                        </div>
+                        <!-- // 가입기준 -->
+                    </div>
+                    <!-- // cont -->
+                </div>
+                <!-- bottom -->
+                <div class="clear">
+                    <div class="title">
+                        <h3>상품에 대한 질문/답변</h3>
+                        <p class="desc">궁금하신 사항을 <span>선택</span>해주시면<br><em>전문설계사</em>가 자세히 안내해드립니다.</p>
+                    </div>
+                    @@include('./modules/slt-list.html', {
+                        size : 'block',
+                        chk : 'chk-qst',
+                        slt : [
+                            '이 상품과 다른 상품의 보장내역을 비교해주세요.',
+                            '이 상품으로 맞춤 보장을 설계해주세요.',
+                            '기타 다른 문의사항이 있습니다.'
+                        ]
+                    })
+                    <button type="button" class="btn point big h50"><span>문의하기</span></button>
+                </div>
+                <!-- // bottom -->
+            </div>
+        </div>
+        <script>
+            $(function(){
+                var $wrap = $('#requirement-change'),
+                    $default = $wrap.find('.default'),
+                    $result = $wrap.find('.result');
+                
+                $default.find('.btn').click(function(){
+                    $default.hide();
+                    $result.show();
+                });
+            });
+        </script>
+    </article>
+    <!-- // 보험료계산 -->
+}
+@@if(context.id === 'modal-complete') {
+    <!-- 완료 modal -->
+    <article id="@@id" class="modal-wrap complete" style="display:none;">
+        <div class="modal-contents">
+            <div class="calc-complete">
+                <p class="tit"><em>보험계산</em>이 <em>완료</em>되었습니다.</p>
+                <p class="desc">보험료 계산 결과는 <em>상품목록</em>에서 확인해주세요.</p>
+                <a href="#n" class="btn point md" rel="modal:close"><span>확인</span></a>
+            </div>
+        </div>
+    </article>
+    <!-- // 완료 modal -->
+}
+@@if(context.id === 'modal07') {
+    <!-- 상품 미리보기 -->
+    <article id="@@id" class="modal-wrap large" style="display:none;">
+        <div class="modal-contents">
+            <div class="insu-preview">
+                <div class="insu-prod-wrap">
+                    <div class="ci"><img src="/mobile/images/ci/ci01.png" alt="MG손해보험"></div>
+                    <h1 class="cate">자가용 운전자 보험</h1>
+                    <div class="border-box insu-title">
+                        <p class="eyebrow">손해보험협회 심의필 제32485호(2021.00.00)</p>
+                        <h2 class="name">(무)건강명의4대질병진단보험(20.04)(암중점형)</h2>
+                        <p class="desc">※ 상품개정으로 인하여 보장내용 및 보험료가 달라질 수 있습니다.</p>
+                    </div>
+                    <ul class="border-box bg-type">
+                        <li>
+                            <dl>
+                                <dt>가입나이</dt>
+                                <dd>만18세 ~ 최대80세</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>가입유형</dt>
+                                <dd>-</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt>보험기간</dt>
+                                <dd>20년 만기</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <div class="buttons">
+                        <a href="#modal01" rel="modal:open" class="btn border h35"><span>무료상담신청</span></a>
+                        <a href="#modal02" rel="modal:open" class="btn point h35"><span>보험료계산</span></a>
+                        <a href="sub_01_view.html" class="btn point2 h35"><span>상품 상세 정보</span></a>
+                    </div>
+                </div>
+                <div class="insu-prod-info">
+                    <h3 class="chk-title">상품 요약 설명</h3>
+                    <div class="shadow-box">
+                        @@include('./modules/insu-info-list.html')
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- // 상품 미리보기 -->
+}
+@@if(context.id === 'modal08') {
+    <!-- 실시간 게시판 문의 -->
+    <article id="@@id" class="modal-wrap medium" style="display:none;">
+        <div class="modal-contents">
+            <div class="tit-wrap">
+                <h1 class="tit">실시간 게시판 문의</h1>
+                <p class="desc">게시판에서 빠르고 자세한 답변을 받아보실 수 있습니다.</p>
+            </div>
+            <div class="form-wrap type2">
+                <div class="row">
+                    <div class="selectbox-wrap">
+                        <select class="nice-select">
+                            <option value="" data-placeholder="true">보험종류를 선택하세요.</option>
+                            <option value="">실비보험</option>
+                        </select>
+                    </div>
+                    <div class="selectbox-wrap">
+                        <select class="nice-select">
+                            <option value="" data-placeholder="true">보험상품을 선택하세요.(필수X)</option>
+                            <option value="">실비보험</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-title">제목</label>
+                    <div class="forms">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-title">
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-cont">문의내용</label>
+                    <div class="forms">
+                        <span class="input-wrap">
+                            <textarea id="ipt-cont"></textarea>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-wrap">
+                <div class="form-title">
+                    <h2 class="tit">고객정보</h2>
+                    <p class="desc">연락처를 남겨주시면 고객님께 꼭 맞는 자세한 상담을 드리겠습니다.</p>
+                </div>
+                <div class="row type2">
+                    <div class="col">
+                        <label for="ipt-name-write">성함</label>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-name-write" placeholder="이름">
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="slt-gender-write">성별</label>
+                        <div class="forms">
+                            <span class="selectbox-wrap">
+                                <select id="slt-gender-write" class="nice-select">
+                                    <option value="" data-placeholder="true">성별을 선택하세요</option>
+                                    <option value="">남성</option>
+                                    <option value="">여성</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-birth-write">생년월일</label>
+                    <div class="forms birth-type">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-birth-write" placeholder="(예시 : 19720717)">
+                        </span>
+                        <div class="year">보험나이 <em>99</em>세</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-phone-write">휴대폰번호</label>
+                    <div class="forms">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-phone-write" placeholder="'-'제외 숫자입력">
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="ipt-email-write">이메일</label>
+                    <div class="forms">
+                        <span class="input-wrap">
+                            <input type="text" id="ipt-email-write" placeholder="(예시 : abc@naver.com)">
+                        </span>
+                    </div>
+                </div>
+                <div class="form-bottom">
+                    <div class="check-wrap">
+                        <span class="chk-wrap">
+                            <input type="checkbox" id="agree-write" name="agree-write">
+                            <label for="agree-write">개인정보수집 및 활용동의</label>
+                        </span>
+                        <a href="#n" class="text-link"><span>보기</span></a>
+                    </div>
+                    <p class="form-msg text-center">※ 고객정보는 당사 외 <em>제3자에게 절대 제공하지 않습니다.</em></p>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="btn point md"><span>게시판 문의</span></button>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- // 실시간 게시판 문의 -->
+}
+@@if(context.id === 'modal-calc') {
+    <!-- 완료 modal -->
+    <article id="@@id" class="modal-wrap calcs" style="display:none;">
+        <div class="modal-contents">
+            <div class="calc-title">
+                <p class="tit">보험설계조건</p>
+                <p class="desc">선택하신 상품의 월 보험료를 쉽게 계산해보세요!</p>
+            </div>
+            <div class="calc-top-wrap">
+                <div class="insu-pp-cont">
+                    <div class="pp-insu">
+                        <p class="tit">월 납입 보험료<small>* 최고가입연령 기준보험료 계산결과</small></p>
+                        <div class="price-wrap">
+                            <p class="cate">암중점형</p>
+                            <p class="price">
+                                <span>월 <em>35,500</em></span>원
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 보험설계조건 -->
+                <div class="requirement">
+                    <div id="requirement-change">
+                        <div class="default">
+                            <p class="tit">보험료 설계조건 변경</p>
+                            <a href="javascript:popupOpen('/mobile/page/popup_04.html', '보험료계산 결과');" class="btn point block md"><span>설계조건 변경하기</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 보험설계조건 -->
+            </div>
+        </div>
+    </article>
+    <!-- // 완료 modal -->
+}

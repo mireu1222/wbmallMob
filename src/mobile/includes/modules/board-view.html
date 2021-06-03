@@ -1,0 +1,88 @@
+<div class="boardview-wrap">
+    <!-- title -->
+    <div class="board-head">
+        <p class="date"><span class="blind">작성일</span>2021-01-04</p>
+        <p class="tit"><span class="blind">제목</span>게시물 타이틀 영역입니다.</p>
+        @@if(context.name) {
+        <p class="name">Written by <em>@@name</em></p>
+        }
+    </div>
+    <!-- // title -->
+    <!-- content -->
+    <div class="board-content">
+        @@if(context.img) {
+        <!-- 이미지 영역 따로 불러올 경우. 에디터의 경우 삭제 -->
+        <div class="img">
+            <img src="/mobile/images/@@img" alt="">
+        </div>
+        <!-- // 이미지 영역 따로 불러올 경우. 에디터의 경우 삭제 -->
+        }
+        <!-- 입력한 텍스트 또는 에디터 내용 불러옴 -->
+        <div class="cont">
+            굿리치가 성인 남녀를 대상으로 재테크에 대한 설문조사 한 결과, 2030세대가 쇼핑보다 투자에 관심이 높은 것으로 나타났다.<br>
+            이들이 재테크 하는 목적은 부동산 구입이 가장 많았고, 결혼과 은퇴자금 마련이 뒤를 이었다.<br><br>
+
+            8일 통합 보험 관리 플랫폼 굿리치는 모바일 리서치 기관 오픈서베이에 의뢰해 수도권에 거주하는 성인 남녀 1000명을 대상으로 진행한 재테크 관련 설문조사 결과를 공개했다. <br>
+            이번 설문조사는 지난달 21~25일까지 진행했고, 20~50대까지 각 250명씩 참여했다.<br><br>
+
+            굿리치는 이번 설문조사를 통해 2030세대 청년들이 투자에 관심이 커졌다고 설명했다.<br><br>
+
+            2030 세대는 최근 접속량이 급증한 앱(복수 응답)으로, 배달 앱(76.8%)을 꼽았다. 이어 쇼핑 앱(51.2%)을 제치고 금융 앱(68.8%)이 두 번째로 접속량이 높은 앱이라고 응답했다.<br><br>
+
+            또, 최근 가장 관심이 증가한 콘텐츠 분야에 대한 질문(복수 응답)에는 재테크(68%)가 가장 많았고, 건강과 운동(43%), 영화와 드라마(37%)가 뒤를 이었다.<br><br>
+
+            2030 청년 세대 응답자들이 꼽은 재테크 목적(복수응답) 1위는 부동산 구입(20대 46.0%, 30대 48.0%)이었고, 2위는 결혼 자금 마련(20대 44.0%, 30대 18.4%), 3위는 은퇴자금 마련(2대 23.2%, 30대 43.6%)이었다.<br><br>
+
+            굿리치는 2030세대가 투자에 대한 관심이 커지면서 보험에 대한 관심도 늘어났다고 분석했다.<br><br>
+
+            '언제 보험 관련 콘텐츠를 찾아보는지'에 대한 질문에 2030세대는 '신규 보험 상품에 가입하거나 기존 보험 상품을 해지할 때(20대 48%, 30대 45%)'가 가장 많다고 응답했다.
+        </div>
+        <!-- // 입력한 텍스트 또는 에디터 내용 불러옴 -->
+        @@if (context.file) {
+        <!-- 첨부파일 / 없을 경우 DOM 삭제되도록. 빈 DOM 남지않게 해주세요. -->
+        <div class="files">
+            <p class="tit">첨부파일</p>
+            <ul class="file-lists">
+                <li><a href="#n" class="file-down">첨부파일제목.jpg</a></li>
+                <li><a href="#n" class="file-down">첨부파일제목.jpg</a></li>
+                <li><a href="#n" class="file-down">첨부파일제목.jpg</a></li>
+            </ul>
+        </div>
+        <!-- // 첨부파일 -->
+        }
+    </div>
+    <!-- // content -->
+    <!-- prev/next -->
+    <div class="board-foot">
+        <!-- 이전글/다음글 다 없을 경우 ul.more-view DOM 삭제 -->
+        <ul class="more-view">
+            <!-- 이전글 없을 경우 li.prev DOM 삭제 -->
+            <li class="prev">
+                <dl>
+                    <dt>이전글</dt>
+                    <dd>
+                        <a href="#n">
+                            <span class="blind">제목</span>[2020.05.18] 22주년 MDM그룹 창립기념 행사 22주년 MDM그룹 창립기념 행사
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+            <!-- // 이전글 없을 경우 li.prev DOM 삭제 -->
+            <!-- 다음글 없을 경우 li.next DOM 삭제 -->
+            <li class="next">
+                <dl>
+                    <dt>다음글</dt>
+                    <dd>
+                        <a href="#n">
+                            <span class="blind">제목</span>[2021.01.02] 2020년도 시무식
+                        </a>
+                    </dd>
+                </dl>
+            </li>
+            <!-- // 다음글 없을 경우 li.next DOM 삭제 -->
+        </ul>
+        <!-- // 이전글/다음글 다 없을 경우 ul.more-view DOM 삭제 -->
+        <a href="/mobile/page/@@page.html" class="btn-to-list"><span class="blind">목록으로</span></a>
+    </div>
+    <!-- // prev/next -->
+</div>

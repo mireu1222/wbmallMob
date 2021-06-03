@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./layout/head.html')
+</head>
+<body>
+    <div class="skip-navigation">
+        <a href="#container">메뉴 건너뛰기</a>
+    </div>
+    <div id="wrap">
+        <!-- header -->
+        @@include('./layout/header.html', {
+            sub03 : true,
+            depth2 : 'sub03',
+            sub0301 : true
+        })
+        <!-- // header -->
+
+        <!-- container -->
+        <div id="container" class="container customers">
+            <div class="sections">
+                @@include('./layout/page-title.html', {
+                    title : '보험리모델링'
+                })
+                <div class="insu-contents">
+                    <div class="insu-intro-cont">
+                        <img src="/mobile/images/@content.gif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="sections">
+                <div class="form-wrap">
+                    <div class="form-title">
+                        <h2 class="tit">고객정보</h2>
+                        <p class="desc">전문상담원이 입력해주신 정보로 연락드리고,<br>상담을 진행합니다.</p>
+                    </div>
+                    <div class="row type2">
+                        <div class="col">
+                            <label for="ipt-name1">성함</label>
+                            <div class="forms">
+                                <span class="input-wrap">
+                                    <input type="text" id="ipt-name1" placeholder="이름">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="slt-gender">성별</label>
+                            <div class="forms">
+                                <span class="selectbox-wrap">
+                                    <select id="slt-gender" class="nice-select">
+                                        <option value="" data-placeholder="true">성별을 선택하세요</option>
+                                        <option value="">남성</option>
+                                        <option value="">여성</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-birth1">생년월일</label>
+                        <div class="forms birth-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-birth1" placeholder="(예시 : 19720717)">
+                            </span>
+                            <div class="year">보험나이 <em>99</em>세</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-phone1">휴대폰번호</label>
+                        <div class="forms phone-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-phone1" placeholder="'-'제외 숫자입력">
+                            </span>
+                            <button type="button" class="btn point"><span>인증번호</span></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-phone-num1">인증번호</label>
+                        <div class="forms phone-type">
+                            <span class="input-wrap">
+                                <input type="text" id="ipt-phone-num1">
+                            </span>
+                            <span class="time">03:00</span>
+                            <button type="button" class="btn point" disabled><span>인증완료</span></button>
+                            <!-- <button type="button" class="btn point"><span>인증완료</span></button> 인증번호 입력 후 disabled 삭제 -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="ipt-cont">상담내용</label>
+                        <div class="forms">
+                            <span class="input-wrap">
+                                <textarea></textarea>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="slt-question1"><span>01.</span>매월 내는 보험료는 얼마인가요?</label>
+                        <div class="forms">
+                            <span class="selectbox-wrap">
+                                <select id="slt-question1" class="nice-select">
+                                    <option value="">10만원 미만</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label for="slt-question2"><span>02.</span>고객님께서 원하시는 내용을 선택해주세요.</label>
+                        <div class="forms">
+                            <span class="selectbox-wrap">
+                                <select id="slt-question2" class="nice-select">
+                                    <option value="">현재 가입중인 보험에 대해 설명을 듣고 싶어요</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <div class="check-wrap">
+                            <span class="chk-wrap">
+                                <input type="checkbox" id="agree" name="agree">
+                                <label for="agree">개인정보수집 및 활용동의</label>
+                            </span>
+                            <a href="#n" class="btn point round small"><span>보기</span></a>
+                        </div>
+                        <p class="form-msg text-center">※ 고객정보는 당사 외 <em>제3자에게 절대 제공하지 않습니다.</em></p>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn point md"><span>보험 리모델링 상담신청</span></button>
+                    </div>
+                </div>
+                <div class="insu-contents bottom">
+                    <div class="insu-intro-cont">
+                        <img src="/mobile/images/@content.gif" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // container -->
+
+        <!-- footer -->
+        @@include('./layout/footer.html')
+        <!-- // footer -->
+    </div>
+    <script>
+        // x-scroll
+        xScroll('.x-scroll');
+    </script>
+</body>
+</html>

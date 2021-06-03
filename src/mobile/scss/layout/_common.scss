@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+/* common */
+.skip-navigation {
+    position:absolute;
+    z-index:9999;
+    a {
+        display:block;
+        width:1px;
+        height:1px;
+        margin:-1px;
+        overflow:hidden;
+    }
+}
+
+html,
+body {
+    height:100%;
+}
+
+/* container */
+#wrap {
+    position:relative;
+    max-width:640px;
+    margin:0 auto;
+    overflow:hidden;
+    .container {
+        position:relative;
+        background:$blur;
+        .select-dropdown {
+            display:block;
+            margin-bottom:30px;
+        }
+        .sections {
+            margin-top:11px;
+            padding:40px 12px;
+            background:#fff;
+            box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.12);
+            &:first-child,
+            &.first {
+                margin-top:0;
+            }
+            .border-tab-wrap {
+                margin-bottom:15px;
+            }
+        }  
+    }
+}
+
+/* info */
+.mobile-info {
+    position:relative;
+    padding:13px 20px 13px 70px;
+    background:$yellow;
+    border-radius:2px;
+    color:#fff;
+    @include font11;
+    &::before {
+        content:' ';
+        position:absolute;
+        top:50%;
+        left:36px;
+        width:24px;
+        height:24px;
+        margin-top:-12px;
+        background:url('/mobile/images/bg/bg-info.png') center no-repeat;
+        background-size:100%;
+    }
+}
+
+.insu-intro-cont {
+    text-align:center;
+}
+
+/* dim */
+.common-dim {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background:rgba(#000, 0.5);
+    z-index:999;
+    &.jquery-modal {
+        overflow-y:scroll;
+        padding:40px 12px;
+        text-align:center;
+        &::before {
+            content:' ';
+            display:inline-block;
+            height:100%;
+            vertical-align:middle;
+            margin-right:-0.05em;
+        }
+    }
+}
+
+/* nodata */
+.nodata {
+    color:$basic;
+    text-align:center;
+    @include font16;
+    padding:100px 0;
+    
+    @include mobile {
+        padding:60px 0;
+    }
+}

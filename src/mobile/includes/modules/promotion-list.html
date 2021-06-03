@@ -1,0 +1,13 @@
+<div class="promotion-lists">
+    <ul class="lists">
+        @@for(var i=0; i < lists.length; i++) {
+        <li>
+            <a href="`+lists[i].link+`" class="inner">
+                <span class="thumb" aria-hidden="true"><img src="/mobile/images/@@img`+[i+1]+`.png" alt=""></span>
+                <p class="title">`+lists[i].title+`</p>
+                <p class="desc">`+lists[i].desc+`</p>
+            </a>
+        </li>
+        }
+    </ul>
+</div>

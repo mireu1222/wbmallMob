@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+/* window popup */
+#popup {
+    position:relative;
+    height:100%;
+    .popup-header {
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        background:$point;
+        z-index:100;
+        .pop-title {
+            padding:14px 40px;
+            text-align:center;
+            color:#fff;
+            font-size:17px;
+            line-height:24px;
+            font-weight:700;
+        }
+    }
+    .popup-container {
+        position:relative;
+        height:auto;
+        padding-top:52px;
+        background:$blur;
+        .sections {
+            margin-top:11px;
+            padding:30px 12px;
+            background:#fff;
+            box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.12);
+            &:first-child {
+                margin-top:0;
+            }
+            .tit-wrap {
+                margin-bottom:15px;
+                .tit {
+                    font-size:17px;
+                    line-height:1.2;
+                    font-weight:700;
+                }
+                .desc {
+                    margin-top:6px;
+                    padding-right:10%;
+                    @include font13;
+                    color:$gray;
+                    word-break:keep-all;
+                }
+            }
+        }
+        .calc-top-wrap {
+            border:1px solid $border;
+            border-radius:8px;
+            @include boxShadow;
+            overflow:hidden;
+            .insu-pp-cont {
+                padding:20px 20px 15px;
+                .name {
+                    font-size:17px;
+                    line-height:1.3;
+                    font-weight:500;
+                }
+                .age {
+                    margin-top:6px;
+                    @include font12;
+                    font-weight:500;
+                    em {
+                        color:$yellow;
+                        font-weight:inherit;
+                    }
+                }
+                .pp-insu {
+                    margin-top:15px;
+                    border-top:1px solid $border;
+                    padding-top:15px;
+                    .tit {
+                        @include font13;
+                        font-weight:500;
+                        small {
+                            display:block;
+                            margin-top:5px;
+                            @include font11;
+                            color:$point;
+                        }
+                    }
+                    .cate {
+                        margin-top:20px;
+                        font-size:16px;
+                        line-height:1.3;
+                        font-weight:700;
+                    }
+                    .insu-name {
+                        margin-top:5px;
+                        @include font12;
+                    }
+                    .price {
+                        margin-top:15px;
+                        text-align:right;
+                        font-size:13px;
+                        line-height:24px;
+                        font-weight:500;
+                        span {
+                            display:inline-block;
+                            vertical-align:bottom;
+                            margin-right:4px;
+                            font-size:16px;
+                            em {
+                                font-size:21px;
+                                font-weight:700;
+                                color:$yellow;
+                            }
+                        }
+                    }
+                }
+            }
+            .requirement {
+                padding:20px;
+                background:$border2;
+                .tit {
+                    @include font13;
+                    font-weight:500;
+                }
+                .default {
+                    text-align:center;
+                }
+                .result {
+                    position:relative;
+                    .tit {
+                        padding:2px 0;
+                    }
+                    .req-list {
+                        > li {
+                            margin-top:12px;
+                            &:first-child {
+                                margin-top:0;
+                            }
+                        }
+                        margin-top:10px;
+                        dt {
+                            @include font12;
+                            margin-bottom:8px;
+                            font-weight:500;
+                        }
+                    }
+                    .btn.refresh {
+                        position:absolute;
+                        top:0;
+                        right:0;
+                        padding-left:30px;
+                        span {
+                            display:inline-block;
+                            vertical-align:top;
+                            line-height:17px;
+                        }
+                        &::before {
+                            content:' ';
+                            position:absolute;
+                            left:10px;
+                            top:50%;
+                            margin-top:-7px;
+                            width:13px;
+                            height:13px;
+                            background:url('/mobile/images/icon/icon-refresh.png') center no-repeat;
+                            background-size:100%;
+                        }
+                    }
+                }
+            }
+        }
+        .callby-info {
+            position:relative;
+            margin-top:15px;
+            padding-left:20px;
+            @include font12;
+            em {
+                display:block;
+                font-weight:500;
+            }
+            &::before {
+                content:' ';
+                position:absolute;
+                top:4px;
+                left:0;
+                width:13px;
+                height:13px;
+                background:url('/mobile/images/icon/icon-call.png') center no-repeat;
+                background-size:100%;
+            }
+        }
+        .insu-question {
+            margin:30px -12px -30px;
+            padding:40px 12px 30px;
+            background:$blur;
+            border-top:1px solid $border;
+            .title {
+                h3 {
+                    @include font13;
+                    font-weight:500;
+                }
+                .desc {
+                    @include font12;
+                    color:$cont;
+                    em {
+                        color:$yellow;
+                        font-weight:500;
+                    }
+                    span {
+                        position:relative;
+                        display:inline-block;
+                        vertical-align:top;
+                        padding-left:15px;
+                        color:$point;
+                        font-weight:500;
+                        &::before {
+                            content:' ';
+                            position:absolute;
+                            top:50%;
+                            left:0;
+                            width:12px;
+                            height:12px;
+                            margin-top:-5px;
+                            border-radius:2px;
+                            background:$point;
+                        }
+                        &::after {
+                            content:' ';
+                            position:absolute;
+                            top:5px;
+                            left:4px;
+                            width:4px;
+                            height:8px;
+                            border:1px solid #fff;
+                            border-top:none;
+                            border-left:none;
+                            transform:rotate(45deg);
+                        }
+                    }
+                }
+            }
+            .slt-lists {
+                margin-top:15px;
+                .chk-wrap {
+                    input + label {
+                        color:$basic;
+                    }
+                }
+            }
+            .btn {
+                margin-top:25px;
+            }
+        }
+        .insu-intro-cont {
+            margin:30px 0;
+        }
+        .answer-top {
+            margin-bottom:30px;
+            padding:20px 15px;
+            border-radius:8px;
+            background:$bg;
+            .by {
+                @include clearfix;
+                text-align:left;
+                .thumb {
+                    float:left;
+                    width:30px;
+                    height:30px;
+                    margin-right:10px;
+                    border-radius:50%;
+                    overflow:hidden;
+                }
+                .name {
+                    float:left;
+                    font-size:11px;
+                    line-height:30px;
+                    em {
+                        margin-right:4px;
+                        color:$yellow;
+                        font-weight:500;
+                    }
+                }
+            }
+            .cont {
+                position:relative;
+                margin-top:15px;
+                margin-left:15px;
+                padding-left:25px;
+                @include font13;
+                text-align:left;
+                word-break:keep-all;
+                &::before {
+                    content:' ';
+                    position:absolute;
+                    top:6px;
+                    left:0;
+                    width:6px;
+                    height:6px;
+                    background:url('/mobile/images/icon/icon-answer.png') center no-repeat;
+                    background-size:100%;
+                }
+                &::after {
+                    content:'A';
+                    position:absolute;
+                    top:0;
+                    left:10px;
+                    font-size:inherit;
+                    line-height:inherit;
+                    color:$yellow;
+                    font-weight:700;
+                }
+            }
+        }
+        .answer-by-profile {
+            margin-top:30px;
+            padding:15px;
+            border:1px solid $border;
+            border-radius:8px;
+            background:$bg;
+            .by {
+                @include clearfix;
+                text-align:left;
+                .thumb {
+                    float:left;
+                    width:30px;
+                    height:30px;
+                    margin-right:10px;
+                    border-radius:50%;
+                    overflow:hidden;
+                }
+                .name {
+                    float:left;
+                    font-size:11px;
+                    line-height:30px;
+                    color:$cont;
+                    em {
+                        margin-right:4px;
+                        font-size:16px;
+                        color:$yellow;
+                        font-weight:500;
+                    }
+                }
+            }
+            .pp-info {
+                margin-top:10px;
+                font-size:0;
+                li {
+                    display:inline-block;
+                    width:50%;
+                    vertical-align:top;
+                    @include font12;
+                    span {
+                        display:inline-block;
+                        vertical-align:top;
+                        width:55px;
+                        color:$cont;
+                    }
+                    &:nth-child(odd) {
+                        span {
+                            width:30px;
+                        }
+                    }
+                }
+            }
+            dl {
+                margin-top:10px;
+                @include font12;
+                @include clearfix;
+                dt {
+                    float:left;
+                }
+                dd {
+                    margin-left:55px;
+                    word-break:keep-all;
+                }
+            }
+        }
+    }
+    .popup-close {
+        position:fixed;
+        top:0;
+        right:0;
+        width:40px;
+        height:52px;
+        z-index:110;
+        &::before {
+            content:' ';
+            position:absolute;
+            width:12px;
+            height:12px;
+            top:50%;
+            right:14px;
+            margin-top:-6px;
+            background:url('/mobile/images/icon/icon-close.png') center no-repeat;
+            background-size:100%;
+        }
+    }
+}
